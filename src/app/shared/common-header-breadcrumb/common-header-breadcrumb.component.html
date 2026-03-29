@@ -1,0 +1,14 @@
+<header class="app-header">
+  <h1>Playground</h1>
+</header>
+
+<div class="demo-breadcrumb-group">
+  <div class="example-shell">
+    <tng-breadcrumb [maxItems]="4" [itemsBeforeCollapse]="1" [itemsAfterCollapse]="2">
+      <tng-breadcrumb-item href="/home">Home</tng-breadcrumb-item>
+      @if (breadcrumbLabel(); as label) {
+        <tng-breadcrumb-item [current]="true">{{ label }}</tng-breadcrumb-item>
+      }
+    </tng-breadcrumb>
+  </div>
+</div>

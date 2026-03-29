@@ -1,0 +1,8 @@
+/* Align routed pages with header/breadcrumb column and center on wide viewports */
+.app-main {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0.5rem 1.25rem 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
