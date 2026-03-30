@@ -113,6 +113,11 @@ export const routes: Routes = [
       import('./playground/form/label/label.component').then((m) => m.LabelComponent),
   },
   {
+    path: 'form-field',
+    loadComponent: () =>
+      import('./playground/form/form-field/form-field.component').then((m) => m.FormFieldComponent),
+  },
+  {
     path: 'input-otp',
     loadComponent: () =>
       import('./playground/form/input-otp/input-otp.component').then((m) => m.InputOtpComponent),

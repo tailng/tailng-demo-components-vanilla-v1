@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'home';
+export const DEFAULT_ROUTE = 'form-field';

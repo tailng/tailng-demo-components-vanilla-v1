@@ -1,0 +1,39 @@
+<section class="demo-page">
+  <label class="form-field-example-field-surface">
+    <span class="form-field-example-field-label">Email</span>
+
+    <tng-form-field class="form-field-example-shell form-field-example-shell--plain" fullWidth="true">
+      <input tngInput type="email" placeholder="team@tailng.dev" ariaLabel="Email" />
+    </tng-form-field>
+  </label>
+</section>
+
+<label class="doc-cmp-form-field-st-workspace-field">
+  <span class="doc-cmp-form-field-st-workspace-label">Workspace slug</span>
+  <tng-form-field class="doc-cmp-form-field-st-workspace-shell">
+    <input tngInput type="text" value="core-platform" />
+    <span tngSuffix class="doc-cmp-form-field-st-workspace-meta">.tailng.dev</span>
+  </tng-form-field>
+</label>
+<tng-form-field class="doc-cmp-form-field-ex-search-shell">
+  <span tngPrefix aria-hidden="true">
+    <tng-icon icon="search" class="doc-cmp-form-field-ex-search-icon" />
+  </span>
+  <input tngInput type="search" placeholder="Search components..." />
+  <span tngSuffix class="doc-cmp-form-field-ex-search-meta">Ctrl+K</span>
+</tng-form-field>
+<tng-form-field class="doc-cmp-form-field-ex-workspace-shell">
+  <input tngInput type="text" value="core-platform" />
+  <span tngSuffix class="doc-cmp-form-field-ex-workspace-meta">.tailng.dev</span>
+</tng-form-field>
+<tng-form-field class="doc-cmp-form-field-ex-clear-shell">
+  <input tngInput type="search" value="TailNG" />
+  <button
+    tngSuffix
+    type="button"
+    class="doc-cmp-form-field-ex-clear-action"
+    aria-label="Clear search"
+  >
+    Clear
+  </button>
+</tng-form-field>
