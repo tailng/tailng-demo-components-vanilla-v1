@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'input';
+export const DEFAULT_ROUTE = 'home';
