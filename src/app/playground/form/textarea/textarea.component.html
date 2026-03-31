@@ -1,4 +1,28 @@
-<section class="demo-page">
-  <h1>Textarea</h1>
-  <p>Textarea playground page.</p>
+<section class="textarea-preview-shell textarea-preview-shell--plain">
+  <label class="textarea-preview-label" for="team-summary-textarea">Team summary</label>
+  <tng-textarea
+    [id]="'team-summary-textarea'"
+    [rows]="4"
+    [placeholder]="'Summarize this sprint'"
+    [value]="value()"
+    (valueChange)="onValueChange($event)"
+  ></tng-textarea>
+  <p class="textarea-preview-value">{{ value().length }} characters</p>
+</section>
+
+<br/>
+<section class="textarea-postmortem-example">
+  <label class="textarea-postmortem-example__label" for="postmortem-summary-textarea">
+    Postmortem summary
+  </label>
+  <tng-textarea
+    class="textarea-postmortem-example__control"
+    [id]="'postmortem-summary-textarea'"
+    [rows]="5"
+    [resize]="'none'"
+    [placeholder]="'Add postmortem summary'"
+    [value]="postmortemSummary()"
+    (valueChange)="onPostmortemSummaryChange($event)"
+  ></tng-textarea>
+  <p class="textarea-postmortem-example__meta">{{ postmortemSummary().length }} characters</p>
 </section>
