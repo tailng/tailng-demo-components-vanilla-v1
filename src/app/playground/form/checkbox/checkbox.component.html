@@ -1,4 +1,36 @@
-<section class="demo-page">
-  <h1>Checkbox</h1>
-  <p>Checkbox playground page.</p>
+<section class="doc-cmp-checkbox-overview-card">
+  <tng-checkbox class="doc-cmp-checkbox-overview-item" [checked]="true">
+    Email notifications
+  </tng-checkbox>
+  <tng-checkbox class="doc-cmp-checkbox-overview-item" [indeterminate]="true">
+    Weekly digest (mixed)
+  </tng-checkbox>
+  <tng-checkbox
+    class="doc-cmp-checkbox-overview-item doc-cmp-checkbox-overview-item--muted"
+    [readonly]="true"
+    [checked]="true"
+  >
+    Readonly legal acknowledgement
+  </tng-checkbox>
+</section>
+<br/>
+<section class="doc-cmp-checkbox-styling-card">
+  <tng-checkbox class="doc-cmp-checkbox-styling-item" [checked]="true">
+    Release checklist complete
+  </tng-checkbox>
+  <tng-checkbox class="doc-cmp-checkbox-styling-item" [indeterminate]="true">
+    Deployment approvals pending
+  </tng-checkbox>
+  <tng-checkbox
+    class="doc-cmp-checkbox-styling-item doc-cmp-checkbox-styling-item--danger"
+    [invalid]="true"
+  >
+    Security review required
+  </tng-checkbox>
+</section>
+<br/>
+<section class="doc-cmp-checkbox-validation-panel">
+  <tng-checkbox class="doc-cmp-checkbox-validation-item" [invalid]="true">
+    Security review is required before production deploy.
+  </tng-checkbox>
 </section>

@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'textarea';
+export const DEFAULT_ROUTE = 'checkbox';
