@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'checkbox';
+export const DEFAULT_ROUTE = 'radio';
