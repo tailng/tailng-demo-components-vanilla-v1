@@ -1,4 +1,136 @@
-<section class="demo-page">
-  <h1>Toggle</h1>
-  <p>Toggle playground page.</p>
+<section class="component-toggle-density-card">
+  <div class="component-toggle-density-card__header">
+    <p class="component-toggle-density-card__eyebrow">Writing workspace</p>
+    <h3 class="component-toggle-density-card__title">Editor density</h3>
+    <p class="component-toggle-density-card__body">Choose how compact the writing workspace should feel.</p>
+  </div>
+  <tng-toggle-group
+    class="component-toggle-density-card__group"
+    selectionMode="single"
+    ariaLabel="Editor density"
+    [value]="selectedDensity()"
+    (valueChange)="onDensityChange($event)"
+  >
+    <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'compact'" (click)="onDensityChoiceClick('compact', $event)">
+      <tng-toggle class="component-toggle-density-card__toggle" [value]="'compact'" pressedLabel="Compact density selected" unpressedLabel="Select compact density">
+        <span offIcon>C</span>
+        <span onIcon>C</span>
+      </tng-toggle>
+      <div class="component-toggle-density-card__copy">
+        <span class="component-toggle-density-card__label">Compact</span>
+        <span class="component-toggle-density-card__meta">Fits more lines on screen.</span>
+      </div>
+    </div>
+    <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'comfortable'" (click)="onDensityChoiceClick('comfortable', $event)">
+      <tng-toggle class="component-toggle-density-card__toggle" [value]="'comfortable'" pressedLabel="Comfortable density selected" unpressedLabel="Select comfortable density">
+        <span offIcon>M</span>
+        <span onIcon>M</span>
+      </tng-toggle>
+      <div class="component-toggle-density-card__copy">
+        <span class="component-toggle-density-card__label">Comfortable</span>
+        <span class="component-toggle-density-card__meta">Balanced spacing for drafting.</span>
+      </div>
+    </div>
+    <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'spacious'" (click)="onDensityChoiceClick('spacious', $event)">
+      <tng-toggle class="component-toggle-density-card__toggle" [value]="'spacious'" pressedLabel="Spacious density selected" unpressedLabel="Select spacious density">
+        <span offIcon>S</span>
+        <span onIcon>S</span>
+      </tng-toggle>
+      <div class="component-toggle-density-card__copy">
+        <span class="component-toggle-density-card__label">Spacious</span>
+        <span class="component-toggle-density-card__meta">Adds breathing room for review.</span>
+      </div>
+    </div>
+  </tng-toggle-group>
+  <p class="component-toggle-density-card__summary">Selected: {{ selectedDensity() }}</p>
+</section>
+<br/>
+<section class="release-toggle-shell">
+  <div class="release-toggle-shell__header">
+    <h3 class="release-toggle-shell__title">Release checklist</h3>
+    <p class="release-toggle-shell__body">Use token overrides on the wrapper shell so the component keeps its internal DOM private.</p>
+  </div>
+  <tng-toggle-group
+    class="release-toggle-shell__group"
+    ariaLabel="Release checklist"
+    [values]="selectedChecks()"
+    (valuesChange)="onChecksChange($event)"
+  >
+    <div class="release-toggle-shell__row" [class.release-toggle-shell__row--active]="selectedChecks().includes('review')" (click)="onChecklistChoiceClick('review', $event)">
+      <tng-toggle [value]="'review'" pressedLabel="Review checkpoint selected" unpressedLabel="Select review checkpoint">
+        <span offIcon>R</span>
+        <span onIcon>R</span>
+      </tng-toggle>
+      <div class="release-toggle-shell__copy">
+        <span class="release-toggle-shell__label">Review</span>
+        <span class="release-toggle-shell__meta">Human approval before publish.</span>
+      </div>
+    </div>
+    <div class="release-toggle-shell__row" [class.release-toggle-shell__row--active]="selectedChecks().includes('qa')" (click)="onChecklistChoiceClick('qa', $event)">
+      <tng-toggle [value]="'qa'" pressedLabel="QA checkpoint selected" unpressedLabel="Select QA checkpoint">
+        <span offIcon>Q</span>
+        <span onIcon>Q</span>
+      </tng-toggle>
+      <div class="release-toggle-shell__copy">
+        <span class="release-toggle-shell__label">QA</span>
+        <span class="release-toggle-shell__meta">Regression sign-off from the test pass.</span>
+      </div>
+    </div>
+    <div class="release-toggle-shell__row" [class.release-toggle-shell__row--active]="selectedChecks().includes('docs')" (click)="onChecklistChoiceClick('docs', $event)">
+      <tng-toggle [value]="'docs'" pressedLabel="Docs checkpoint selected" unpressedLabel="Select docs checkpoint">
+        <span offIcon>D</span>
+        <span onIcon>D</span>
+      </tng-toggle>
+      <div class="release-toggle-shell__copy">
+        <span class="release-toggle-shell__label">Docs</span>
+        <span class="release-toggle-shell__meta">Release notes and migration guidance.</span>
+      </div>
+    </div>
+  </tng-toggle-group>
+</section>
+
+<br/>
+<section class="toggle-formatting-card">
+  <div class="toggle-formatting-card__header">
+    <p class="toggle-formatting-card__eyebrow">Editing toolbar</p>
+    <h3 class="toggle-formatting-card__title">Formatting actions</h3>
+    <p class="toggle-formatting-card__body">
+      Standalone toggles work well for independent editor actions.
+    </p>
+  </div>
+
+  <div class="toggle-formatting-card__toolbar" role="toolbar" aria-label="Formatting actions">
+    <tng-toggle
+      class="toggle-formatting-card__toggle"
+      [pressed]="boldActive()"
+      pressedLabel="Disable bold"
+      unpressedLabel="Enable bold"
+      (pressedChange)="boldActive.set($event)"
+    >
+      <span offIcon>B</span>
+      <span onIcon>B</span>
+    </tng-toggle>
+    <tng-toggle
+      class="toggle-formatting-card__toggle"
+      [pressed]="italicActive()"
+      pressedLabel="Disable italic"
+      unpressedLabel="Enable italic"
+      (pressedChange)="italicActive.set($event)"
+    >
+      <span offIcon>I</span>
+      <span onIcon>I</span>
+    </tng-toggle>
+    <tng-toggle
+      class="toggle-formatting-card__toggle"
+      [pressed]="codeActive()"
+      pressedLabel="Disable code style"
+      unpressedLabel="Enable code style"
+      (pressedChange)="codeActive.set($event)"
+    >
+      <span offIcon>C</span>
+      <span onIcon>C</span>
+    </tng-toggle>
+  </div>
+
+  <p class="toggle-formatting-card__summary">Active: {{ activeFormattingSummary() }}</p>
 </section>
