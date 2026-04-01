@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'switch';
+export const DEFAULT_ROUTE = 'button-toggle';
