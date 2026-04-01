@@ -1,4 +1,48 @@
-<section class="demo-page">
-  <h1>Label</h1>
-  <p>Label playground page.</p>
+<section class="doc-cmp-label-overview-card">
+  <div class="doc-cmp-label-overview-card__field">
+    <tng-label forId="doc-cmp-label-overview-workspace" [required]="true">
+      Workspace name
+    </tng-label>
+    <input
+      id="doc-cmp-label-overview-workspace"
+      class="doc-cmp-label-overview-card__input"
+      type="text"
+      placeholder="North Star"
+      aria-required="true"
+    />
+  </div>
+  <div class="doc-cmp-label-overview-card__row">
+    <input id="doc-cmp-label-overview-alerts" type="checkbox" class="doc-cmp-label-overview-card__checkbox" />
+    <tng-label forId="doc-cmp-label-overview-alerts">Send release alerts</tng-label>
+  </div>
+</section>
+<br/>
+<section class="doc-cmp-label-styling-card">
+  <div class="doc-cmp-label-styling-card__field">
+    <tng-label class="doc-cmp-label-styling-host" forId="doc-cmp-label-styling-owner" [required]="true">
+      Release owner
+    </tng-label>
+    <input id="doc-cmp-label-styling-owner" class="doc-cmp-label-styling-card__input" type="text" />
+  </div>
+  <div class="doc-cmp-label-styling-card__field">
+    <tng-label class="doc-cmp-label-styling-host doc-cmp-label-styling-host--muted" forId="doc-cmp-label-styling-archive" [disabled]="true">
+      Archived environment
+    </tng-label>
+    <input id="doc-cmp-label-styling-archive" class="doc-cmp-label-styling-card__input" type="text" disabled />
+  </div>
+</section>
+<br/>
+<section class="doc-cmp-label-examples-card">
+  <div class="doc-cmp-label-examples-card__field">
+    <tng-label forId="doc-cmp-label-examples-project" [required]="true">Project name</tng-label>
+    <input id="doc-cmp-label-examples-project" class="doc-cmp-label-examples-card__input" type="text" aria-required="true" placeholder="Nova" />
+  </div>
+  <div class="doc-cmp-label-examples-card__row">
+    <input id="doc-cmp-label-examples-alerts" type="checkbox" class="doc-cmp-label-examples-card__checkbox" />
+    <tng-label forId="doc-cmp-label-examples-alerts">Send release alerts</tng-label>
+  </div>
+  <div class="doc-cmp-label-examples-card__field">
+    <tng-label class="doc-cmp-label-examples-card__meta-label" forId="doc-cmp-label-examples-archive" [disabled]="true">Archive note</tng-label>
+    <input id="doc-cmp-label-examples-archive" class="doc-cmp-label-examples-card__input" type="text" disabled placeholder="Readonly metadata" />
+  </div>
 </section>

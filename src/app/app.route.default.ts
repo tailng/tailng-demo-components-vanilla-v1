@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'radio';
+export const DEFAULT_ROUTE = 'label';
