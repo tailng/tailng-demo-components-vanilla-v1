@@ -17,10 +17,10 @@
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
-    "@tailng-ui/components": "^0.23.0",
+    "@tailng-ui/components": "^0.26.0",
     "@tailng-ui/icons": "^0.13.0",
-    "@tailng-ui/primitives": "^0.22.0",
-    "@tailng-ui/theme": "^0.13.0",
+    "@tailng-ui/primitives": "^0.25.0",
+    "@tailng-ui/theme": "^0.16.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

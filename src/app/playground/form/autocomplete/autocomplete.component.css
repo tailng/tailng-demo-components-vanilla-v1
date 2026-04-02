@@ -1,7 +1,98 @@
-.demo-page {
+/* Overview */
+.docs-autocomplete-overview-example {
+  display: grid;
+  gap: 0.85rem;
+  inline-size: min(100%, 34rem);
+  margin-inline: auto;
   padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+.docs-autocomplete-overview-example__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docs-autocomplete-overview-example__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.docs-autocomplete-overview-example__copy,
+.docs-autocomplete-overview-example__summary {
+  margin: 0;
+  color: #475569;
+}
+
+.docs-autocomplete-overview-example__control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  --tng-semantic-background-canvas: #ffffff;
+  --tng-semantic-background-surface: #f1f5f9;
+  --tng-semantic-border-subtle: #cbd5e1;
+  --tng-semantic-border-strong: #94a3b8;
+  --tng-semantic-foreground-primary: #0f172a;
+  --tng-semantic-foreground-secondary: #475569;
+  --tng-semantic-foreground-muted: #64748b;
+  --tng-semantic-accent-brand: #2563eb;
+  --tng-semantic-focus-ring: #2563eb;
+  --tng-autocomplete-bg: #ffffff;
+  --tng-autocomplete-surface: #f1f5f9;
+  --tng-autocomplete-border: #cbd5e1;
+  --tng-autocomplete-border-strong: #94a3b8;
+  --tng-autocomplete-fg: #0f172a;
+  --tng-autocomplete-muted: #64748b;
+  --tng-autocomplete-brand: #2563eb;
+  --tng-autocomplete-focus-ring: #2563eb;
+}
+
+/* Styling */
+.docs-autocomplete-styling-example {
+  display: grid;
+  gap: 0.9rem;
+  inline-size: min(100%, 34rem);
+  margin-inline: auto;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.1rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
+}
+
+.docs-autocomplete-styling-example__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docs-autocomplete-styling-example__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.docs-autocomplete-styling-example__copy,
+.docs-autocomplete-styling-example__summary {
+  margin: 0;
+  color: #475569;
+}
+
+.docs-autocomplete-styling-example__control {
+  display: block;
+  width: 100%;
+  --tng-semantic-background-canvas: #ffffff;
+  --tng-semantic-background-surface: #f8fafc;
+  --tng-semantic-border-subtle: #cbd5e1;
+  --tng-semantic-border-strong: #cbd5e1;
+  --tng-semantic-foreground-primary: #0f172a;
+  --tng-semantic-foreground-secondary: #475569;
+  --tng-semantic-foreground-muted: #64748b;
+  --tng-semantic-accent-brand: #2563eb;
+  --tng-semantic-focus-ring: #2563eb;
 }
