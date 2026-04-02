@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'toggle';
+export const DEFAULT_ROUTE = 'listbox';
