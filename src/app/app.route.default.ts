@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'autocomplete';
+export const DEFAULT_ROUTE = 'multi-autocomplete';
