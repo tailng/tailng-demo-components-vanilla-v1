@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'select';
+export const DEFAULT_ROUTE = 'multiselect';

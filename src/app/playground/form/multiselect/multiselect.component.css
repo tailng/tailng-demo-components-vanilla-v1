@@ -1,7 +1,111 @@
-.demo-page {
-  padding: 1rem;
+/* Overview plain */
+.shell {
+  display: grid; gap: 0.9rem; max-width: 36rem; margin: auto;
+  padding: 1.1rem; border: 1px solid #cbd5e1; border-radius: 1.25rem;
+  background: #fff; color: #0f172a;
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+.control {
+  width: 100%;
+  --tng-select-radius: 1rem;
+  --tng-select-trigger-py: 0.8rem;
+  --tng-select-trigger-px: 0.95rem;
+  --tng-select-option-py: 0.75rem;
+  --tng-select-option-px: 0.85rem;
+  --tng-select-bg: #ffffff;
+  --tng-select-border-strong: #94a3b8;
+  --tng-select-fg: #0f172a;
+  --tng-select-brand: #2563eb;
+  --tng-select-focus-ring: #2563eb;
+}
+
+/* Example */
+.dual-multiselect-plain-shell {
+  display: grid;
+  gap: 0.9rem;
+  inline-size: 100%;
+  padding: 1.1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.dual-multiselect-plain-header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dual-multiselect-plain-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.dual-multiselect-plain-copy {
+  margin: 0;
+  color: #475569;
+}
+
+.dual-multiselect-plain-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 64rem) {
+  .dual-multiselect-plain-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.dual-multiselect-plain-card {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  background: #f8fafc;
+}
+
+.dual-multiselect-plain-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+  color: #334155;
+}
+
+.dual-multiselect-plain-summary {
+  margin: 0;
+  color: #475569;
+}
+
+.dual-multiselect-plain-control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  --tng-semantic-background-canvas: #ffffff;
+  --tng-semantic-background-surface: #f8fafc;
+  --tng-semantic-border-subtle: #d8e2ef;
+  --tng-semantic-border-strong: #94a3b8;
+  --tng-semantic-foreground-primary: #0f172a;
+  --tng-semantic-foreground-secondary: #475569;
+  --tng-semantic-foreground-muted: #64748b;
+  --tng-semantic-accent-brand: #0f766e;
+  --tng-semantic-focus-ring: #0f766e;
+  --tng-select-radius: 1rem;
+  --tng-select-trigger-py: 0.625rem;
+  --tng-select-trigger-px: 0.875rem;
+  --tng-select-option-py: 0.625rem;
+  --tng-select-option-px: 0.875rem;
+  --tng-select-bg: #ffffff;
+  --tng-select-surface: #f8fafc;
+  --tng-select-border: #d8e2ef;
+  --tng-select-border-strong: #94a3b8;
+  --tng-select-fg: #0f172a;
+  --tng-select-muted: #64748b;
+  --tng-select-brand: #0f766e;
+  --tng-select-focus-ring: #0f766e;
 }
