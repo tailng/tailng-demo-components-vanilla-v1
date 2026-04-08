@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'multiselect';
+export const DEFAULT_ROUTE = 'chips';
