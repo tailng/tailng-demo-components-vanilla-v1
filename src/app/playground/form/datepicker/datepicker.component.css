@@ -1,0 +1,54 @@
+.doc-cmp-datepicker-shell {
+  display: grid;
+  gap: 1rem;
+  inline-size: min(100%, 30rem);
+  margin-inline: auto;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
+}
+
+.doc-cmp-datepicker-shell__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.doc-cmp-datepicker-shell__eyebrow {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.doc-cmp-datepicker-shell__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.doc-cmp-datepicker-shell__copy {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.doc-cmp-datepicker-shell__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.doc-cmp-datepicker-shell__label {
+  color: #334155;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.doc-cmp-datepicker-shell__control {
+  width: 100%;
+}
