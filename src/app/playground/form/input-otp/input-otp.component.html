@@ -1,4 +1,89 @@
-<section class="demo-page">
-  <h1>InputOtp</h1>
-  <p>InputOtp playground page.</p>
+<section class="docs-component-input-otp-overview-plain-shell">
+  <div class="docs-component-input-otp-overview-plain-header">
+    <span class="docs-component-input-otp-overview-plain-kicker">Verification code</span>
+    <p class="docs-component-input-otp-overview-plain-copy">
+      Wrapper-first OTP entry with a controlled string value and a light verification surface.
+    </p>
+  </div>
+
+  <tng-input-otp
+    class="docs-component-input-otp-overview-plain-control"
+    [length]="6"
+    [value]="componentInputOtpOverviewPlainValue()"
+    [ariaLabel]="'Verification code'"
+    (valueChange)="onComponentInputOtpOverviewPlainValueChange($event)"
+    (complete)="onComponentInputOtpOverviewPlainComplete($event)"
+  ></tng-input-otp>
+
+  <p class="docs-component-input-otp-overview-plain-summary">
+    Value: {{ componentInputOtpOverviewPlainValue() || '—' }}
+  </p>
+  <p class="docs-component-input-otp-overview-plain-summary">
+    Complete event: {{ componentInputOtpOverviewPlainComplete() || '—' }}
+  </p>
+</section>
+<br />
+<section class="docs-component-input-otp-styling-plain-shell">
+  <div class="docs-component-input-otp-styling-plain-header">
+    <span class="docs-component-input-otp-styling-plain-kicker">Review code</span>
+    <p class="docs-component-input-otp-styling-plain-copy">
+      The wrapper keeps the OTP behavior stable while your host class supplies the visual theme.
+    </p>
+  </div>
+
+  <tng-input-otp
+    class="docs-component-input-otp-styling-plain-control"
+    [length]="6"
+    [value]="componentInputOtpStylingPlainValue()"
+    [ariaLabel]="'Review code'"
+    (valueChange)="onComponentInputOtpStylingPlainValueChange($event)"
+  ></tng-input-otp>
+</section>
+<br/>
+<section class="docs-component-input-otp-examples-passcode-plain-shell">
+  <div class="docs-component-input-otp-examples-passcode-plain-header">
+    <span class="docs-component-input-otp-examples-passcode-plain-kicker">Verification flow</span>
+    <p class="docs-component-input-otp-examples-passcode-plain-copy">
+      A straightforward numeric code step with completion feedback.
+    </p>
+  </div>
+
+  <tng-input-otp
+    class="docs-component-input-otp-examples-passcode-plain-control"
+    [length]="6"
+    [value]="componentInputOtpExamplesPasscodePlainValue()"
+    [ariaLabel]="'Verification code'"
+    (valueChange)="onComponentInputOtpExamplesPasscodePlainValueChange($event)"
+    (complete)="onComponentInputOtpExamplesPasscodePlainComplete($event)"
+  ></tng-input-otp>
+
+  <p class="docs-component-input-otp-examples-passcode-plain-summary">
+    Value: {{ componentInputOtpExamplesPasscodePlainValue() || '—' }}
+  </p>
+  <p class="docs-component-input-otp-examples-passcode-plain-summary">
+    Complete event: {{ componentInputOtpExamplesPasscodePlainComplete() || '—' }}
+  </p>
+</section>
+<br/>
+<section class="docs-component-input-otp-examples-recovery-plain-shell">
+  <div class="docs-component-input-otp-examples-recovery-plain-header">
+    <span class="docs-component-input-otp-examples-recovery-plain-kicker">Recovery code</span>
+    <p class="docs-component-input-otp-examples-recovery-plain-copy">
+      Alphanumeric entry with masking for sensitive approval checkpoints.
+    </p>
+  </div>
+
+  <tng-input-otp
+    class="docs-component-input-otp-examples-recovery-plain-control"
+    [length]="6"
+    [type]="'alphanumeric'"
+    [mask]="true"
+    [value]="componentInputOtpExamplesRecoveryPlainValue()"
+    [ariaLabel]="'Recovery code'"
+    (valueChange)="onComponentInputOtpExamplesRecoveryPlainValueChange($event)"
+  ></tng-input-otp>
+
+  <p class="docs-component-input-otp-examples-recovery-plain-summary">
+    Value: {{ componentInputOtpExamplesRecoveryPlainValue() || '—' }}
+  </p>
 </section>
