@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'input-otp';
+export const DEFAULT_ROUTE = 'datepicker';
