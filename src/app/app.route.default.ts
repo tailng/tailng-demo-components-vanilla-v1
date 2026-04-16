@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'datepicker';
+export const DEFAULT_ROUTE = 'menubar';
