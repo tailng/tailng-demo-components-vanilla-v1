@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'menubar';
+export const DEFAULT_ROUTE = 'menu';
