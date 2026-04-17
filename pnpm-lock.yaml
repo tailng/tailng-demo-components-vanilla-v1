@@ -39,8 +39,8 @@ importers:
         specifier: ^0.39.0
         version: 0.39.0(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(@tailng-ui/cdk@0.27.0(tslib@2.8.1))(tslib@2.8.1)
       '@tailng-ui/theme':
-        specifier: ^0.25.0
-        version: 0.25.0(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))
+        specifier: ^0.26.0
+        version: 0.26.0(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -1360,8 +1360,8 @@ packages:
       '@tailng-ui/cdk': ^0.27.0
       tslib: ^2.3.0
 
-  '@tailng-ui/theme@0.25.0':
-    resolution: {integrity: sha512-kscgGYW+2yW0vG8ys4aRv3+lkBR4q2+a9KQYK9b1IV8m5/sM2RDGh0bSe8dR+6+ho3ckfxW4wWtPhquJCxsRKw==}
+  '@tailng-ui/theme@0.26.0':
+    resolution: {integrity: sha512-q94NxISbNm/c3BC4ZVotcCTEvAd04YeHwsoT2G+fQ0iLEwHym3i1kXyVWdZd3cIt5OLqP4wvoL8sTyk6HDIcbA==}
     peerDependencies:
       '@angular/core': ^21.1.0
 
@@ -3848,7 +3848,7 @@ snapshots:
       '@tailng-ui/cdk': 0.27.0(tslib@2.8.1)
       tslib: 2.8.1
 
-  '@tailng-ui/theme@0.25.0(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))':
+  '@tailng-ui/theme@0.26.0(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))':
     dependencies:
       '@angular/core': 21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)
       tslib: 2.8.1

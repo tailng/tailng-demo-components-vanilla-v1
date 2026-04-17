@@ -1,5 +1,13 @@
 <div class="menu-trigger-shell">
-  <button type="button" [tngMenuTriggerFor]="menuOverviewPlainMenu" class="menu-trigger">Options</button>
+  <button
+    type="button"
+    id="menu-overview-plain-trigger"
+    data-slot="menu-trigger"
+    [tngMenuTriggerFor]="menuOverviewPlainMenu"
+    class="menu-trigger"
+  >
+    Options
+  </button>
   <tng-menu
     #menuOverviewPlainMenu="tngMenu"
     ariaLabel="Options menu"
@@ -17,7 +25,13 @@
 <br/>
 
 <div class="menu-example-trigger-shell">
-  <button type="button" [tngMenuTriggerFor]="menuExamplesPlainMenu" class="menu-example-trigger">
+  <button
+    type="button"
+    id="menu-examples-plain-trigger"
+    data-slot="menu-trigger"
+    [tngMenuTriggerFor]="menuExamplesPlainMenu"
+    class="menu-example-trigger"
+  >
     Options
   </button>
   <tng-menu
@@ -35,3 +49,39 @@
 <p class="menu-example-state">last command: {{ menuExamplesPlainLastCommand() }}</p>
 
 <br/>
+<div class="menu-example-trigger-shell">
+  <button
+    type="button"
+    [tngMenuTriggerFor]="menuExamplesCascadePlainRootMenu"
+    class="menu-example-trigger"
+  >
+    Import
+  </button>
+  <tng-menu
+    #menuExamplesCascadePlainRootMenu="tngMenu"
+    ariaLabel="Import root menu"
+    class="menu-example-panel"
+    (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+  >
+    <button type="button" tngMenuItem tngMenuItemValue="Import from CSV">CSV file</button>
+    <button
+      type="button"
+      tngMenuItem
+      [tngMenuItemSubmenu]="menuExamplesCascadePlainGitMenu"
+      tngMenuItemValue="Import from git"
+    >
+      Git repository
+    </button>
+
+    <tng-menu
+      #menuExamplesCascadePlainGitMenu="tngMenu"
+      ariaLabel="Git submenu"
+      class="menu-example-panel menu-example-panel--submenu menu-example-panel--level-1"
+      (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+    >
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitHub">GitHub</button>
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitLab">GitLab</button>
+    </tng-menu>
+  </tng-menu>
+</div>
+<p class="menu-example-state">last cascaded command: {{ menuExamplesCascadePlainLastCommand() }}</p>
