@@ -1,30 +1,30 @@
+<!-- Overview plain -->
 <button
-  type="button"
-  id="menu-overview-plain-trigger"
-  data-slot="menu-trigger"
-  [tngMenuTriggerFor]="menuOverviewPlainMenu"
+type="button"
+id="menu-overview-plain-trigger"
+[tngMenuTriggerFor]="menuOverviewPlainMenu"
 >
-  Options
+Options
 </button>
 <tng-menu
-  #menuOverviewPlainMenu="tngMenu"
-  ariaLabel="Options menu"
-  (tngMenuSelect)="onMenuOverviewPlainSelect($event)"
+#menuOverviewPlainMenu="tngMenu"
+ariaLabel="Options menu"
+(tngMenuSelect)="onMenuOverviewPlainSelect($event)"
 >
-  <div tngMenuGroupLabel>Options</div>
-  <button type="button" tngMenuItem tngMenuItemValue="Pin item">Pin</button>
-  <button type="button" tngMenuItem tngMenuItemValue="Mute notifications">Mute</button>
-  <button type="button" tngMenuItem tngMenuItemValue="Remove item">Remove</button>
+<div tngMenuGroupLabel>Options</div>
+<button type="button" tngMenuItem tngMenuItemValue="Pin item">Pin</button>
+<button type="button" tngMenuItem tngMenuItemValue="Mute notifications">Mute</button>
+<button type="button" tngMenuItem tngMenuItemValue="Remove item">Remove</button>
 </tng-menu>
 <p>last command: {{ menuOverviewPlainLastCommand() }}</p>
 
 <br/>
-
+<br/>
+<!-- Examples styled plain Action menu variant -->
 <div>
   <button
     type="button"
     id="menu-examples-plain-trigger"
-    data-slot="menu-trigger"
     [tngMenuTriggerFor]="menuExamplesPlainMenu"
   >
     Options
@@ -41,46 +41,10 @@
   </tng-menu>
 </div>
 <p>last command: {{ menuExamplesPlainLastCommand() }}</p>
-<br/>
-
-<div>
-  <button
-    type="button"
-    id="menu-examples-cascade-plain-root-trigger"
-    data-slot="menu-trigger"
-    [tngMenuTriggerFor]="menuExamplesCascadePlainRootMenu"
-  >
-    Import
-  </button>
-  <tng-menu
-    #menuExamplesCascadePlainRootMenu="tngMenu"
-    ariaLabel="Import root menu"
-    (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
-  >
-    <button type="button" tngMenuItem tngMenuItemValue="Import from CSV">CSV file</button>
-    <button
-      type="button"
-      tngMenuItem
-      [tngMenuItemSubmenu]="menuExamplesCascadePlainGitMenu"
-      tngMenuItemValue="Import from git"
-    >
-      Git repository
-    </button>
-
-    <tng-menu
-      #menuExamplesCascadePlainGitMenu="tngMenu"
-      ariaLabel="Git submenu"
-      (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
-    >
-      <button type="button" tngMenuItem tngMenuItemValue="Import from GitHub">GitHub</button>
-      <button type="button" tngMenuItem tngMenuItemValue="Import from GitLab">GitLab</button>
-    </tng-menu>
-  </tng-menu>
-</div>
-<p>last cascaded command: {{ menuExamplesCascadePlainLastCommand() }}</p>
 
 <br/>
-
+<br/>
+<!-- Examples styled plain State driven hooks -->
 <div class="menu-examples-styled-plain-shell">
   <p class="menu-examples-styled-plain-note">
     Use this example when you want to own the trigger and panel look, while styling from public state
@@ -139,3 +103,41 @@
   </tng-menu>
 </div>
 <p>last styled command: {{ menuExamplesStyledPlainLastCommand() }}</p>
+
+<br/>
+<br/>
+<!-- Examples styled plain : Cascade menu variant -->
+<div>
+  <button
+    type="button"
+    id="menu-examples-cascade-plain-root-trigger"
+    [tngMenuTriggerFor]="menuExamplesCascadePlainRootMenu"
+  >
+    Import
+  </button>
+  <tng-menu
+    #menuExamplesCascadePlainRootMenu="tngMenu"
+    ariaLabel="Import root menu"
+    (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+  >
+    <button type="button" tngMenuItem tngMenuItemValue="Import from CSV">CSV file</button>
+    <button
+      type="button"
+      tngMenuItem
+      [tngMenuItemSubmenu]="menuExamplesCascadePlainGitMenu"
+      tngMenuItemValue="Import from git"
+    >
+      Git repository
+    </button>
+
+    <tng-menu
+      #menuExamplesCascadePlainGitMenu="tngMenu"
+      ariaLabel="Git submenu"
+      (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+    >
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitHub">GitHub</button>
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitLab">GitLab</button>
+    </tng-menu>
+  </tng-menu>
+</div>
+<p>last cascaded command: {{ menuExamplesCascadePlainLastCommand() }}</p>
