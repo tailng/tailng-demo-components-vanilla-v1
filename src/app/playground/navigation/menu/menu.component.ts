@@ -28,4 +28,10 @@ export class MenuComponent {
   protected onMenuExamplesCascadePlainSelect(event: TngMenuSelectEvent): void {
     this.menuExamplesCascadePlainLastCommand.set(String(event.value));
   }
+
+  protected readonly menuExamplesStyledPlainLastCommand = signal('No command yet');
+
+  protected onMenuExamplesStyledPlainSelect(event: TngMenuSelectEvent): void {
+    this.menuExamplesStyledPlainLastCommand.set(String(event.value));
+  }
 }
