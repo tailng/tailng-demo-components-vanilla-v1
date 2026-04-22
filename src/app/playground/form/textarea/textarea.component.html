@@ -1,3 +1,4 @@
+<!-- textarea overview plain -->
 <section class="textarea-preview-shell textarea-preview-shell--plain">
   <label class="textarea-preview-label" for="team-summary-textarea">Team summary</label>
   <tng-textarea
@@ -9,14 +10,14 @@
   ></tng-textarea>
   <p class="textarea-preview-value">{{ value().length }} characters</p>
 </section>
-
 <br/>
+
+
 <section class="textarea-postmortem-example">
   <label class="textarea-postmortem-example__label" for="postmortem-summary-textarea">
     Postmortem summary
   </label>
   <tng-textarea
-    class="textarea-postmortem-example__control"
     [id]="'postmortem-summary-textarea'"
     [rows]="5"
     [resize]="'none'"
@@ -26,3 +27,4 @@
   ></tng-textarea>
   <p class="textarea-postmortem-example__meta">{{ postmortemSummary().length }} characters</p>
 </section>
+
