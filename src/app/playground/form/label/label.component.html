@@ -1,48 +1,57 @@
+<!-- Basic label -->
 <section class="doc-cmp-label-overview-card">
   <div class="doc-cmp-label-overview-card__field">
     <tng-label forId="doc-cmp-label-overview-workspace" [required]="true">
       Workspace name
     </tng-label>
-    <input
-      id="doc-cmp-label-overview-workspace"
-      class="doc-cmp-label-overview-card__input"
+    <tng-input
+      [id]="'doc-cmp-label-overview-workspace'"
       type="text"
       placeholder="North Star"
-      aria-required="true"
-    />
+      [ariaRequired]="true"
+    ></tng-input>
   </div>
   <div class="doc-cmp-label-overview-card__row">
-    <input id="doc-cmp-label-overview-alerts" type="checkbox" class="doc-cmp-label-overview-card__checkbox" />
+    <input
+      id="doc-cmp-label-overview-alerts"
+      type="checkbox"
+      class="doc-cmp-label-overview-card__checkbox"
+    />
     <tng-label forId="doc-cmp-label-overview-alerts">Send release alerts</tng-label>
   </div>
 </section>
-<br/>
+
+<br />
+
+<!-- Label styling(Plain ) -->
 <section class="doc-cmp-label-styling-card">
   <div class="doc-cmp-label-styling-card__field">
-    <tng-label class="doc-cmp-label-styling-host" forId="doc-cmp-label-styling-owner" [required]="true">
-      Release owner
-    </tng-label>
-    <input id="doc-cmp-label-styling-owner" class="doc-cmp-label-styling-card__input" type="text" />
+    <tng-label forId="doc-cmp-label-styling-owner" [required]="true"> Release owner </tng-label>
+    <tng-input [id]="'doc-cmp-label-styling-owner'" type="text"></tng-input>
   </div>
-  <div class="doc-cmp-label-styling-card__field">
-    <tng-label class="doc-cmp-label-styling-host doc-cmp-label-styling-host--muted" forId="doc-cmp-label-styling-archive" [disabled]="true">
+  <div class="doc-cmp-label-styling-card__field doc-cmp-label-styling-card__field--muted">
+    <tng-label forId="doc-cmp-label-styling-archive" [disabled]="true">
       Archived environment
     </tng-label>
-    <input id="doc-cmp-label-styling-archive" class="doc-cmp-label-styling-card__input" type="text" disabled />
+    <tng-input [id]="'doc-cmp-label-styling-archive'" type="text" [disabled]="true"></tng-input>
   </div>
 </section>
-<br/>
+
+<br />
+
+<!-- Label association pattern -->
 <section class="doc-cmp-label-examples-card">
   <div class="doc-cmp-label-examples-card__field">
     <tng-label forId="doc-cmp-label-examples-project" [required]="true">Project name</tng-label>
-    <input id="doc-cmp-label-examples-project" class="doc-cmp-label-examples-card__input" type="text" aria-required="true" placeholder="Nova" />
+    <tng-input [id]="'doc-cmp-label-examples-project'" type="text" [ariaRequired]="true" placeholder="Nova"></tng-input>
   </div>
   <div class="doc-cmp-label-examples-card__row">
     <input id="doc-cmp-label-examples-alerts" type="checkbox" class="doc-cmp-label-examples-card__checkbox" />
     <tng-label forId="doc-cmp-label-examples-alerts">Send release alerts</tng-label>
   </div>
-  <div class="doc-cmp-label-examples-card__field">
-    <tng-label class="doc-cmp-label-examples-card__meta-label" forId="doc-cmp-label-examples-archive" [disabled]="true">Archive note</tng-label>
-    <input id="doc-cmp-label-examples-archive" class="doc-cmp-label-examples-card__input" type="text" disabled placeholder="Readonly metadata" />
+  <div class="doc-cmp-label-examples-card__field doc-cmp-label-examples-card__field--meta">
+    <tng-label forId="doc-cmp-label-examples-archive" [disabled]="true">Archive note</tng-label>
+    <tng-input [id]="'doc-cmp-label-examples-archive'" type="text" [disabled]="true" placeholder="Readonly metadata"></tng-input>
   </div>
 </section>
+
