@@ -263,6 +263,11 @@ export const routes: Routes = [
       import('./playground/form/multiselect/multiselect.component').then((m) => m.MultiselectComponent),
   },
   {
+    path: 'datepicker',
+    loadComponent: () =>
+      import('./playground/form/datepicker/datepicker.component').then((m) => m.DatepickerComponent),
+  },
+  {
     path: 'grid',
     loadComponent: () =>
       import('./playground/layout/grid/grid.component').then((m) => m.GridComponent),

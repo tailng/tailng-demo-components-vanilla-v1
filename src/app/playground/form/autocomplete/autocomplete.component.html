@@ -1,4 +1,50 @@
-<section class="demo-page">
-  <h1>Autocomplete</h1>
-  <p>Autocomplete playground page.</p>
+<section class="docs-autocomplete-overview-example">
+  <div class="docs-autocomplete-overview-example__header">
+    <span class="docs-autocomplete-overview-example__eyebrow">Country directory</span>
+    <p class="docs-autocomplete-overview-example__copy">
+      Wrapper-first autocomplete for standard country search.
+    </p>
+  </div>
+
+  <tng-autocomplete
+    class="docs-autocomplete-overview-example__control"
+    [options]="countries"
+    [value]="selectedCountry()"
+    (valueChange)="onSelectedCountryChange($event)"
+    [getOptionValue]="getCountryValue"
+    [getOptionLabel]="getCountryLabel"
+    placeholder="Type Ind to filter"
+    [ariaLabel]="'Country directory'"
+  ></tng-autocomplete>
+
+  <p class="docs-autocomplete-overview-example__summary">
+    Selected: {{ selectedLabel() }}
+  </p>
+</section>
+
+<br/>
+
+<section class="docs-autocomplete-styling-example">
+  <div class="docs-autocomplete-styling-example__header">
+    <span class="docs-autocomplete-styling-example__eyebrow">Release owner</span>
+    <p class="docs-autocomplete-styling-example__copy">
+      Host-level token overrides restyle the wrapper without reaching into private child selectors.
+    </p>
+  </div>
+
+  <tng-autocomplete
+    class="docs-autocomplete-styling-example__control"
+    [options]="releaseOwners"
+    [value]="selectedOwner()"
+    (valueChange)="onSelectedOwnerChange($event)"
+    [getOptionValue]="getOwnerValue"
+    [getOptionLabel]="getOwnerLabel"
+    [isOptionDisabled]="isOwnerDisabled"
+    placeholder="Assign a release owner"
+    [ariaLabel]="'Release owner'"
+  ></tng-autocomplete>
+
+  <p class="docs-autocomplete-styling-example__summary">
+    Selected: {{ selectedSummary() }}
+  </p>
 </section>

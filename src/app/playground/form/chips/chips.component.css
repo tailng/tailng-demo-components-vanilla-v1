@@ -1,7 +1,145 @@
-.demo-page {
-  padding: 1rem;
+/* Overview plain */
+.docs-component-chips-overview-plain-shell {
+  display: grid;
+  gap: 0.9rem;
+  inline-size: min(100%, 36rem);
+  margin-inline: auto;
+  padding: 1.1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+.docs-component-chips-overview-plain-header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docs-component-chips-overview-plain-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.docs-component-chips-overview-plain-copy,
+.docs-component-chips-overview-plain-summary {
+  margin: 0;
+  color: #475569;
+}
+
+.docs-component-chips-overview-plain-control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  color-scheme: light;
+  --tng-semantic-background-base: #ffffff;
+  --tng-semantic-border-subtle: #d8e2ef;
+  --tng-semantic-foreground-primary: #0f172a;
+}
+
+.docs-component-chips-overview-plain-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.docs-component-chips-overview-plain-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.45rem 0.8rem;
+}
+
+.docs-component-chips-overview-plain-chip-remove {
+  border: 0;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: inherit;
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  padding: 0;
+}
+
+.docs-component-chips-overview-plain-chip-remove[data-focused] {
+  outline: 2px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 2px;
+}
+
+/* Examples locked plain */
+.docs-component-chips-examples-locked-plain-shell {
+  display: grid;
+  gap: 0.9rem;
+  inline-size: min(100%, 36rem);
+  margin-inline: auto;
+  padding: 1.1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.docs-component-chips-examples-locked-plain-control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  color-scheme: light;
+  --tng-semantic-background-base: #ffffff;
+  --tng-semantic-border-subtle: #d8e2ef;
+  --tng-semantic-foreground-primary: #0f172a;
+}
+
+.docs-component-chips-examples-locked-plain-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.docs-component-chips-examples-locked-plain-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #99f6e4;
+  background: #ecfeff;
+  color: #115e59;
+  padding: 0.45rem 0.8rem;
+}
+
+.docs-component-chips-examples-locked-plain-chip[data-disabled] {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #94a3b8;
+}
+
+.docs-component-chips-examples-locked-plain-chip-remove {
+  border: 0;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.16);
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
 }

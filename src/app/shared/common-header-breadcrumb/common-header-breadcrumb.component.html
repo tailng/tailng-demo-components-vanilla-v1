@@ -1,5 +1,40 @@
 <header class="app-header">
-  <h1>Playground</h1>
+  <div class="app-header__row">
+    <h1>Playground</h1>
+    <div class="app-header__controls">
+      <label class="app-header__field">
+        <span class="app-header__field-label">Theme</span>
+        <select
+          class="app-header__select"
+          [value]="themeFamilyId()"
+          (change)="onThemeFamilyChange($event)"
+          aria-label="Theme preset"
+        >
+          @for (family of themeFamilies; track family.id) {
+            <option [value]="family.id">{{ family.label }}</option>
+          }
+        </select>
+      </label>
+      <div class="app-header__mode" role="group" aria-label="Color mode">
+        <button
+          type="button"
+          class="app-header__mode-btn"
+          [class.app-header__mode-btn--active]="colorMode() === 'light'"
+          (click)="setColorMode('light')"
+        >
+          Light
+        </button>
+        <button
+          type="button"
+          class="app-header__mode-btn"
+          [class.app-header__mode-btn--active]="colorMode() === 'dark'"
+          (click)="setColorMode('dark')"
+        >
+          Dark
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
 
 <div class="demo-breadcrumb-group">

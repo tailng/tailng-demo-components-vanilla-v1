@@ -1,4 +1,143 @@
-<section class="demo-page">
-  <h1>Menu</h1>
-  <p>Menu playground page.</p>
-</section>
+<!-- Overview plain -->
+<button
+type="button"
+id="menu-overview-plain-trigger"
+[tngMenuTriggerFor]="menuOverviewPlainMenu"
+>
+Options
+</button>
+<tng-menu
+#menuOverviewPlainMenu="tngMenu"
+ariaLabel="Options menu"
+(tngMenuSelect)="onMenuOverviewPlainSelect($event)"
+>
+<div tngMenuGroupLabel>Options</div>
+<button type="button" tngMenuItem tngMenuItemValue="Pin item">Pin</button>
+<button type="button" tngMenuItem tngMenuItemValue="Mute notifications">Mute</button>
+<button type="button" tngMenuItem tngMenuItemValue="Remove item">Remove</button>
+</tng-menu>
+<p>last command: {{ menuOverviewPlainLastCommand() }}</p>
+
+<br/>
+<br/>
+<!-- Examples styled plain Action menu variant -->
+<div>
+  <button
+    type="button"
+    id="menu-examples-plain-trigger"
+    [tngMenuTriggerFor]="menuExamplesPlainMenu"
+  >
+    Options
+  </button>
+  <tng-menu
+    #menuExamplesPlainMenu="tngMenu"
+    ariaLabel="Options menu"
+    (tngMenuSelect)="onMenuExamplesPlainSelect($event)"
+  >
+    <div tngMenuGroupLabel>Options</div>
+    <button type="button" tngMenuItem tngMenuItemValue="Pin item">Pin</button>
+    <button type="button" tngMenuItem tngMenuItemValue="Mute notifications">Mute</button>
+    <button type="button" tngMenuItem tngMenuItemValue="Remove item">Remove</button>
+  </tng-menu>
+</div>
+<p>last command: {{ menuExamplesPlainLastCommand() }}</p>
+
+<br/>
+<br/>
+<!-- Examples styled plain State driven hooks -->
+<div class="menu-examples-styled-plain-shell">
+  <p class="menu-examples-styled-plain-note">
+    Use this example when you want to own the trigger and panel look, while styling from public state
+    hooks like <code>aria-expanded</code>, <code>data-state</code>, and <code>data-active</code>.
+  </p>
+  <button
+    type="button"
+    id="menu-examples-styled-plain-trigger"
+    [tngMenuTriggerFor]="menuExamplesStyledPlainMenu"
+    class="menu-examples-styled-plain-trigger"
+  >
+    Deploy
+  </button>
+  <tng-menu
+    #menuExamplesStyledPlainMenu="tngMenu"
+    ariaLabel="Styled deployment menu"
+    class="menu-examples-styled-plain-menu"
+    (tngMenuSelect)="onMenuExamplesStyledPlainSelect($event)"
+  >
+    <div tngMenuGroupLabel class="menu-examples-styled-plain-label">Deployment</div>
+    <button type="button" tngMenuItem tngMenuItemValue="Run checks" class="menu-examples-styled-plain-item">
+      Run checks
+    </button>
+    <button
+      type="button"
+      tngMenuItem
+      [tngMenuItemSubmenu]="menuExamplesStyledPlainTargetMenu"
+      tngMenuItemValue="Choose target"
+      class="menu-examples-styled-plain-item"
+    >
+      Choose target
+    </button>
+    <button
+      type="button"
+      tngMenuItem
+      tngMenuItemValue="Rollback build"
+      disabled
+      class="menu-examples-styled-plain-item"
+    >
+      Rollback
+    </button>
+
+    <tng-menu
+      #menuExamplesStyledPlainTargetMenu="tngMenu"
+      ariaLabel="Deployment target menu"
+      class="menu-examples-styled-plain-menu"
+      (tngMenuSelect)="onMenuExamplesStyledPlainSelect($event)"
+    >
+      <button type="button" tngMenuItem tngMenuItemValue="Deploy to staging" class="menu-examples-styled-plain-item">
+        Staging cluster
+      </button>
+      <button type="button" tngMenuItem tngMenuItemValue="Deploy to production" class="menu-examples-styled-plain-item">
+        Production cluster
+      </button>
+    </tng-menu>
+  </tng-menu>
+</div>
+<p>last styled command: {{ menuExamplesStyledPlainLastCommand() }}</p>
+
+<br/>
+<br/>
+<!-- Examples styled plain : Cascade menu variant -->
+<div>
+  <button
+    type="button"
+    id="menu-examples-cascade-plain-root-trigger"
+    [tngMenuTriggerFor]="menuExamplesCascadePlainRootMenu"
+  >
+    Import
+  </button>
+  <tng-menu
+    #menuExamplesCascadePlainRootMenu="tngMenu"
+    ariaLabel="Import root menu"
+    (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+  >
+    <button type="button" tngMenuItem tngMenuItemValue="Import from CSV">CSV file</button>
+    <button
+      type="button"
+      tngMenuItem
+      [tngMenuItemSubmenu]="menuExamplesCascadePlainGitMenu"
+      tngMenuItemValue="Import from git"
+    >
+      Git repository
+    </button>
+
+    <tng-menu
+      #menuExamplesCascadePlainGitMenu="tngMenu"
+      ariaLabel="Git submenu"
+      (tngMenuSelect)="onMenuExamplesCascadePlainSelect($event)"
+    >
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitHub">GitHub</button>
+      <button type="button" tngMenuItem tngMenuItemValue="Import from GitLab">GitLab</button>
+    </tng-menu>
+  </tng-menu>
+</div>
+<p>last cascaded command: {{ menuExamplesCascadePlainLastCommand() }}</p>

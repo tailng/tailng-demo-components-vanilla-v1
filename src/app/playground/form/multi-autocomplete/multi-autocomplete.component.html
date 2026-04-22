@@ -1,4 +1,45 @@
-<section class="demo-page">
-  <h1>MultiAutocomplete</h1>
-  <p>MultiAutocomplete playground page.</p>
+<section class="docs-multi-autocomplete-overview-plain-shell">
+  <div class="docs-multi-autocomplete-overview-plain-header">
+    <span class="docs-multi-autocomplete-overview-plain-kicker">Launch markets</span>
+    <p class="docs-multi-autocomplete-overview-plain-copy">
+      Wrapper-first multi selection with visible chips and a controlled value array.
+    </p>
+  </div>
+
+  <tng-multi-autocomplete
+    class="docs-multi-autocomplete-overview-plain-control"
+    [options]="componentOverviewPlainLaunchMarkets"
+    [value]="componentOverviewPlainSelectedMarketCodes()"
+    (valueChange)="onComponentOverviewPlainSelectedMarketsChange($event)"
+    [getOptionValue]="getComponentOverviewPlainMarketValue"
+    [getOptionLabel]="getComponentOverviewPlainMarketLabel"
+    placeholder="Search launch markets"
+    [ariaLabel]="'Launch markets'"
+  ></tng-multi-autocomplete>
+
+  <p class="docs-multi-autocomplete-overview-plain-summary">Selected: {{ componentOverviewPlainSelectedMarketSummary() }}</p>
+</section>
+<br/>
+
+<section class="docs-multi-autocomplete-styling-plain-shell">
+  <div class="docs-multi-autocomplete-styling-plain-header">
+    <span class="docs-multi-autocomplete-styling-plain-kicker">Release owners</span>
+    <p class="docs-multi-autocomplete-styling-plain-copy">
+      Host-level semantic tokens restyle the wrapper without reaching into private child selectors.
+    </p>
+  </div>
+
+  <tng-multi-autocomplete
+    class="docs-multi-autocomplete-styling-plain-control"
+    [options]="componentStylingPlainReleaseOwners"
+    [value]="componentStylingPlainSelectedOwnerIds()"
+    (valueChange)="onComponentStylingPlainSelectedOwnersChange($event)"
+    [getOptionValue]="getComponentStylingPlainOwnerValue"
+    [getOptionLabel]="getComponentStylingPlainOwnerLabel"
+    [isOptionDisabled]="isComponentStylingPlainOwnerDisabled"
+    placeholder="Assign release owners"
+    [ariaLabel]="'Release owners'"
+  ></tng-multi-autocomplete>
+
+  <p class="docs-multi-autocomplete-styling-plain-summary">Selected: {{ componentStylingPlainSelectedOwnerSummary() }}</p>
 </section>

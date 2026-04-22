@@ -1,4 +1,57 @@
-<section class="demo-page">
-  <h1>Multiselect</h1>
-  <p>Multiselect playground page.</p>
+<section class="shell">
+  <div class="header">
+    <span class="kicker">Planet picker</span>
+    <p class="copy">Wrapper-first multi-selection with a light shell.</p>
+  </div>
+
+  <tng-multiselect
+    class="control"
+    [options]="planets"
+    [value]="selectedPlanets()"
+    (valueChange)="onValueChange($event)"
+    [getOptionValue]="getPlanetValue"
+    [getOptionLabel]="getPlanetLabel"
+    placeholder="Select planets"
+  ></tng-multiselect>
+</section>
+<br/>
+<section class="dual-multiselect-plain-shell">
+  <div class="dual-multiselect-plain-header">
+    <span class="dual-multiselect-plain-kicker">Dual tag groups</span>
+    <p class="dual-multiselect-plain-copy">
+      Two independent multiselects with Tab-based keyboard handoff between controls.
+    </p>
+  </div>
+
+  <div class="dual-multiselect-plain-grid">
+    <div class="dual-multiselect-plain-card">
+      <p class="dual-multiselect-plain-card-title">Tag group A</p>
+      <tng-multiselect
+        class="dual-multiselect-plain-control"
+        [options]="tagOptions"
+        [value]="tagValueA()"
+        (valueChange)="onTagAValueChange($event)"
+        [getOptionValue]="getTagValue"
+        [getOptionLabel]="getTagLabel"
+        placeholder="Select tags"
+        aria-label="Tag group A multiselect"
+      ></tng-multiselect>
+      <p class="dual-multiselect-plain-summary">Selected: {{ tagSummaryA() }}</p>
+    </div>
+
+    <div class="dual-multiselect-plain-card">
+      <p class="dual-multiselect-plain-card-title">Tag group B</p>
+      <tng-multiselect
+        class="dual-multiselect-plain-control"
+        [options]="tagOptions"
+        [value]="tagValueB()"
+        (valueChange)="onTagBValueChange($event)"
+        [getOptionValue]="getTagValue"
+        [getOptionLabel]="getTagLabel"
+        placeholder="Select tags"
+        aria-label="Tag group B multiselect"
+      ></tng-multiselect>
+      <p class="dual-multiselect-plain-summary">Selected: {{ tagSummaryB() }}</p>
+    </div>
+  </div>
 </section>

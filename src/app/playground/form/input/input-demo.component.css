@@ -1,33 +1,18 @@
+/* Label chrome only; tng-input needs no local CSS. */
+
 .doc-cmp-input-overview-simple-surface {
   display: grid;
   gap: 0.5rem;
   padding: 0.9rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--tng-semantic-border-subtle);
   border-radius: 0.95rem;
-  background: rgba(255, 255, 255, 0.88);
+  background: color-mix(in srgb, var(--tng-semantic-background-surface) 88%, transparent);
 }
 
 .doc-cmp-input-overview-simple-label {
-  color: #64748b;
+  color: var(--tng-semantic-foreground-secondary);
   font-size: 0.78rem;
   font-weight: 600;
-}
-
-.doc-cmp-input-overview-simple-host--plain {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  --tng-input-min-height: 2.5rem;
-  --tng-input-radius: 0.72rem;
-  --tng-input-px: 0.78rem;
-  --tng-input-bg: #ffffff;
-  --tng-input-border: #cbd5e1;
-  --tng-input-focus-ring: rgba(59, 130, 246, 0.22);
-  --tng-input-fg: #0f172a;
-  --tng-input-font-size: 0.98rem;
-  --tng-input-font-weight: 500;
-  --tng-input-line-height: 1.35;
-  --tng-input-placeholder: #94a3b8;
 }
 
 /*
@@ -46,22 +31,6 @@ Styling section
   line-height: 1.2;
 }
 
-.doc-cmp-input-style-scenario-plain-host {
-  display: block;
-  width: 100%;
-  --tng-input-min-height: 2.45rem;
-  --tng-input-radius: 0.75rem;
-  --tng-input-px: 0.78rem;
-  --tng-input-border: #cbd5e1;
-  --tng-input-bg: #ffffff;
-  --tng-input-focus-ring: rgba(6, 182, 212, 0.18);
-  --tng-input-fg: #0f172a;
-  --tng-input-font-size: 0.98rem;
-  --tng-input-font-weight: 500;
-  --tng-input-line-height: 1.35;
-  --tng-input-placeholder: #94a3b8;
-}
-
 /*
 Input example
 */
@@ -69,22 +38,6 @@ Input example
   display: grid;
   gap: 0.65rem;
   width: min(100%, 32rem);
-}
-
-.doc-cmp-input-ex-basic-host {
-  display: block;
-  width: 100%;
-  --tng-input-bg: #ffffff;
-  --tng-input-border: #cbd5e1;
-  --tng-input-focus-ring: rgba(59, 130, 246, 0.22);
-  --tng-input-radius: 0.78rem;
-  --tng-input-min-height: 2.65rem;
-  --tng-input-px: 0.88rem;
-  --tng-input-fg: #0f172a;
-  --tng-input-font-size: 0.98rem;
-  --tng-input-font-weight: 500;
-  --tng-input-line-height: 1.35;
-  --tng-input-placeholder: #94a3b8;
 }
 
 /*
@@ -97,21 +50,19 @@ Input example
   width: min(100%, 100%);
 }
 
-.doc-cmp-input-ex-types-host {
-  display: block;
-  width: 100%;
-  --tng-input-bg: #ffffff;
-  --tng-input-border: #cbd5e1;
-  --tng-input-focus-ring: rgba(59, 130, 246, 0.22);
-  --tng-input-radius: 0.78rem;
-  --tng-input-min-height: 2.65rem;
-  --tng-input-px: 0.88rem;
-  --tng-input-fg: #0f172a;
-  --tng-input-font-size: 0.98rem;
-  --tng-input-font-weight: 500;
-  --tng-input-line-height: 1.35;
-  --tng-input-placeholder: #94a3b8;
+/* 
+Validation state
+ */
+.doc-cmp-input-ex-validation-preview.doc-cmp-input-ex-validation-stack {
+  display: grid;
+  gap: 0.5rem;
+  width: min(100%, 32rem);
 }
+.doc-cmp-input-ex-validation-helper--danger {
+  color: #dc2626;
+  font-size: 0.82rem;
+}
+
 /*
 Input example
 */
@@ -119,20 +70,4 @@ Input example
   display: grid;
   gap: 0.65rem;
   width: min(100%, 32rem);
-}
-
-.doc-cmp-input-ex-states-host {
-  display: block;
-  width: 100%;
-  --tng-input-bg: #ffffff;
-  --tng-input-border: #cbd5e1;
-  --tng-input-focus-ring: rgba(59, 130, 246, 0.22);
-  --tng-input-radius: 0.78rem;
-  --tng-input-min-height: 2.65rem;
-  --tng-input-px: 0.88rem;
-  --tng-input-fg: #0f172a;
-  --tng-input-font-size: 0.98rem;
-  --tng-input-font-weight: 500;
-  --tng-input-line-height: 1.35;
-  --tng-input-placeholder: #94a3b8;
 }
