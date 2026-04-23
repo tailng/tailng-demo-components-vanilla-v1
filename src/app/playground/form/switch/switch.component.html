@@ -1,41 +1,44 @@
+<!-- Basic-switch -->
 <section class="component-switch-release-card">
   <p class="component-switch-release-card__eyebrow">Release controls</p>
   <tng-switch
-    class="component-switch-release-card__switch"
     [checked]="releaseReady()"
     (checkedChange)="releaseReady.set($event)"
   >
     Release ready
   </tng-switch>
 </section>
+
 <br/>
+<!-- Release gate switch -->
 <section class="component-switch-review-card">
   <div class="component-switch-review-card__header">
     <h3 class="component-switch-review-card__title">Release gate</h3>
     <p class="component-switch-review-card__meta">Require human sign-off before publish.</p>
   </div>
   <tng-switch
-    class="component-switch-review-card__switch"
     [checked]="requireReview()"
     (checkedChange)="requireReview.set($event)"
   >
     Require review
   </tng-switch>
 </section>
+
 <br/>
+<!-- Settings panel switch -->
 <section class="component-switch-settings-card">
   <tng-switch
-    class="component-switch-settings-card__switch"
     [checked]="releaseEmails()"
     (checkedChange)="releaseEmails.set($event)"
   >
     Release summary email
   </tng-switch>
   <tng-switch
-    class="component-switch-settings-card__switch"
     [checked]="freezeWindow()"
     (checkedChange)="freezeWindow.set($event)"
   >
     Freeze deploy window
   </tng-switch>
 </section>
+
+
