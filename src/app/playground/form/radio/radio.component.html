@@ -1,8 +1,8 @@
+<!-- Basic radio example -->
 <section class="doc-cmp-radio-overview-card">
   <h3 class="doc-cmp-radio-overview-card__title">Billing plan</h3>
   <p class="doc-cmp-radio-overview-card__subtitle">Choose the launch plan for this workspace.</p>
   <tng-radio
-    class="doc-cmp-radio-overview-item"
     name="plain-billing-plan"
     value="starter"
     [checked]="selectedPlainBillingPlan() === 'starter'"
@@ -11,7 +11,6 @@
     Starter
   </tng-radio>
   <tng-radio
-    class="doc-cmp-radio-overview-item"
     name="plain-billing-plan"
     value="pro"
     [checked]="selectedPlainBillingPlan() === 'pro'"
@@ -19,31 +18,59 @@
   >
     Pro
   </tng-radio>
-  <tng-radio
-    class="doc-cmp-radio-overview-item doc-cmp-radio-overview-item--muted"
-    name="plain-billing-plan"
-    value="enterprise"
-    [checked]="selectedPlainBillingPlan() === 'enterprise'"
-    (checkedChange)="onPlainBillingPlanChange('enterprise', $event)"
-  >
-    Enterprise
-  </tng-radio>
+  <div class="doc-cmp-radio-overview-item doc-cmp-radio-overview-item--muted">
+    <tng-radio
+      name="plain-billing-plan"
+      value="enterprise"
+      [checked]="selectedPlainBillingPlan() === 'enterprise'"
+      (checkedChange)="onPlainBillingPlanChange('enterprise', $event)"
+    >
+      Enterprise
+    </tng-radio>
+  </div>
   <p class="doc-cmp-radio-overview-card__summary">Selected: {{ selectedPlainBillingPlan() }}</p>
 </section>
+<br>
+<!-- Radio styling example -->
 <section class="doc-cmp-radio-styling-panel">
   <h3 class="doc-cmp-radio-styling-panel__title">Release target</h3>
   <tng-radio
-    class="doc-cmp-radio-styling-item"
     name="release-target"
     [checked]="true"
   >
     Production release
   </tng-radio>
+  <div class="doc-cmp-radio-styling-item doc-cmp-radio-styling-item--danger">
+    <tng-radio
+      name="release-target"
+      [invalid]="true"
+    >
+      Needs compliance approval
+    </tng-radio>
+  </div>
+</section>
+<br>
+
+<!-- Readonly Radio example -->
+
+<section class="doc-cmp-radio-review-card">
+  <h3 class="doc-cmp-radio-review-card__title">Release track review</h3>
   <tng-radio
-    class="doc-cmp-radio-styling-item doc-cmp-radio-styling-item--danger"
-    name="release-target"
-    [invalid]="true"
+    name="plain-release-track"
+    value="stable"
+    [checked]="true"
+    [readonly]="true"
   >
-    Needs compliance approval
+    Stable
   </tng-radio>
+  <div class="doc-cmp-radio-review-item doc-cmp-radio-review-item--danger">
+    <tng-radio
+      name="plain-release-track"
+      value="canary"
+      [invalid]="true"
+      [readonly]="true"
+    >
+      Canary requires compliance approval
+    </tng-radio>
+  </div>
 </section>
