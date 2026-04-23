@@ -1,36 +1,44 @@
+<!-- Basic Checkbox -->
 <section class="doc-cmp-checkbox-overview-card">
-  <tng-checkbox class="doc-cmp-checkbox-overview-item" [checked]="true">
+  <tng-checkbox [checked]="true">
     Email notifications
   </tng-checkbox>
-  <tng-checkbox class="doc-cmp-checkbox-overview-item" [indeterminate]="true">
+  <tng-checkbox [indeterminate]="true">
     Weekly digest (mixed)
   </tng-checkbox>
-  <tng-checkbox
-    class="doc-cmp-checkbox-overview-item doc-cmp-checkbox-overview-item--muted"
-    [readonly]="true"
-    [checked]="true"
-  >
-    Readonly legal acknowledgement
-  </tng-checkbox>
+  <div class="doc-cmp-checkbox-overview-item--muted">
+    <tng-checkbox
+      [readonly]="true"
+      [checked]="true"
+    >
+      Readonly legal acknowledgement
+    </tng-checkbox>
+  </div>
 </section>
+
 <br/>
+
 <section class="doc-cmp-checkbox-styling-card">
-  <tng-checkbox class="doc-cmp-checkbox-styling-item" [checked]="true">
+  <tng-checkbox [checked]="true">
     Release checklist complete
   </tng-checkbox>
-  <tng-checkbox class="doc-cmp-checkbox-styling-item" [indeterminate]="true">
+  <tng-checkbox [indeterminate]="true">
     Deployment approvals pending
   </tng-checkbox>
-  <tng-checkbox
-    class="doc-cmp-checkbox-styling-item doc-cmp-checkbox-styling-item--danger"
-    [invalid]="true"
-  >
-    Security review required
-  </tng-checkbox>
+  <div class="doc-cmp-checkbox-styling-item--danger">
+    <tng-checkbox
+      [invalid]="true"
+    >
+      Security review required
+    </tng-checkbox>
+  </div>
 </section>
+
+
 <br/>
 <section class="doc-cmp-checkbox-validation-panel">
-  <tng-checkbox class="doc-cmp-checkbox-validation-item" [invalid]="true">
+  <tng-checkbox [invalid]="true">
     Security review is required before production deploy.
   </tng-checkbox>
 </section>
+

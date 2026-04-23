@@ -10,16 +10,17 @@
   background: rgba(255, 255, 255, 0.92);
 }
 
-.doc-cmp-checkbox-overview-item {
+.doc-cmp-checkbox-overview-card > tng-checkbox {
   display: block;
   --tng-semantic-accent-brand: #2563eb;
   --tng-semantic-focus-ring: rgba(37, 99, 235, 0.22);
 }
 
-.doc-cmp-checkbox-overview-item--muted {
+.doc-cmp-checkbox-overview-item--muted tng-checkbox {
   --tng-semantic-foreground-primary: #64748b;
   --tng-semantic-foreground-secondary: #64748b;
 }
+
 /* Styling card */
 .doc-cmp-checkbox-styling-card {
   display: grid;
@@ -32,17 +33,18 @@
   background: rgba(255, 255, 255, 0.92);
 }
 
-.doc-cmp-checkbox-styling-item {
+.doc-cmp-checkbox-styling-card > tng-checkbox {
   display: block;
   --tng-semantic-accent-brand: #2563eb;
   --tng-semantic-focus-ring: rgba(37, 99, 235, 0.22);
   --tng-semantic-foreground-primary: #0f172a;
 }
 
-.doc-cmp-checkbox-styling-item--danger {
+.doc-cmp-checkbox-styling-item--danger tng-checkbox {
   --tng-semantic-accent-danger: #dc2626;
   --tng-semantic-foreground-primary: #991b1b;
 }
+
 /* Example page */
 .doc-cmp-checkbox-validation-panel {
   display: grid;
@@ -55,9 +57,10 @@
   background: rgba(254, 242, 242, 0.78);
 }
 
-.doc-cmp-checkbox-validation-item {
+.doc-cmp-checkbox-validation-panel tng-checkbox {
   display: block;
   --tng-semantic-accent-danger: #dc2626;
   --tng-semantic-focus-ring: rgba(220, 38, 38, 0.18);
   --tng-semantic-foreground-primary: #991b1b;
 }
+
