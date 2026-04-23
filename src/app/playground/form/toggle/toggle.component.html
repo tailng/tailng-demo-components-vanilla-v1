@@ -1,3 +1,4 @@
+<!-- Basic toggle -->
 <section class="component-toggle-density-card">
   <div class="component-toggle-density-card__header">
     <p class="component-toggle-density-card__eyebrow">Writing workspace</p>
@@ -5,14 +6,13 @@
     <p class="component-toggle-density-card__body">Choose how compact the writing workspace should feel.</p>
   </div>
   <tng-toggle-group
-    class="component-toggle-density-card__group"
     selectionMode="single"
     ariaLabel="Editor density"
     [value]="selectedDensity()"
     (valueChange)="onDensityChange($event)"
   >
     <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'compact'" (click)="onDensityChoiceClick('compact', $event)">
-      <tng-toggle class="component-toggle-density-card__toggle" [value]="'compact'" pressedLabel="Compact density selected" unpressedLabel="Select compact density">
+      <tng-toggle [value]="'compact'" pressedLabel="Compact density selected" unpressedLabel="Select compact density">
         <span offIcon>C</span>
         <span onIcon>C</span>
       </tng-toggle>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'comfortable'" (click)="onDensityChoiceClick('comfortable', $event)">
-      <tng-toggle class="component-toggle-density-card__toggle" [value]="'comfortable'" pressedLabel="Comfortable density selected" unpressedLabel="Select comfortable density">
+      <tng-toggle [value]="'comfortable'" pressedLabel="Comfortable density selected" unpressedLabel="Select comfortable density">
         <span offIcon>M</span>
         <span onIcon>M</span>
       </tng-toggle>
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="component-toggle-density-card__choice" [class.component-toggle-density-card__choice--active]="selectedDensity() === 'spacious'" (click)="onDensityChoiceClick('spacious', $event)">
-      <tng-toggle class="component-toggle-density-card__toggle" [value]="'spacious'" pressedLabel="Spacious density selected" unpressedLabel="Select spacious density">
+      <tng-toggle [value]="'spacious'" pressedLabel="Spacious density selected" unpressedLabel="Select spacious density">
         <span offIcon>S</span>
         <span onIcon>S</span>
       </tng-toggle>
@@ -44,14 +44,15 @@
   </tng-toggle-group>
   <p class="component-toggle-density-card__summary">Selected: {{ selectedDensity() }}</p>
 </section>
+
 <br/>
+<!-- Release checklist with multiple selection toggles. -->
 <section class="release-toggle-shell">
   <div class="release-toggle-shell__header">
     <h3 class="release-toggle-shell__title">Release checklist</h3>
     <p class="release-toggle-shell__body">Use token overrides on the wrapper shell so the component keeps its internal DOM private.</p>
   </div>
   <tng-toggle-group
-    class="release-toggle-shell__group"
     ariaLabel="Release checklist"
     [values]="selectedChecks()"
     (valuesChange)="onChecksChange($event)"
@@ -90,6 +91,7 @@
 </section>
 
 <br/>
+<!-- Toggle formatting -->
 <section class="toggle-formatting-card">
   <div class="toggle-formatting-card__header">
     <p class="toggle-formatting-card__eyebrow">Editing toolbar</p>
@@ -101,7 +103,6 @@
 
   <div class="toggle-formatting-card__toolbar" role="toolbar" aria-label="Formatting actions">
     <tng-toggle
-      class="toggle-formatting-card__toggle"
       [pressed]="boldActive()"
       pressedLabel="Disable bold"
       unpressedLabel="Enable bold"
@@ -111,7 +112,6 @@
       <span onIcon>B</span>
     </tng-toggle>
     <tng-toggle
-      class="toggle-formatting-card__toggle"
       [pressed]="italicActive()"
       pressedLabel="Disable italic"
       unpressedLabel="Enable italic"
@@ -121,7 +121,6 @@
       <span onIcon>I</span>
     </tng-toggle>
     <tng-toggle
-      class="toggle-formatting-card__toggle"
       [pressed]="codeActive()"
       pressedLabel="Disable code style"
       unpressedLabel="Enable code style"
