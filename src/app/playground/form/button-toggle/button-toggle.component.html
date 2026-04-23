@@ -1,49 +1,60 @@
+<!-- Editor density button toggle -->
 <section class="doc-cmp-button-toggle-density-card">
   <div class="doc-cmp-button-toggle-density-card__header">
     <span class="doc-cmp-button-toggle-density-card__eyebrow">Editor density</span>
     <p class="doc-cmp-button-toggle-density-card__body">Choose how compact the writing workspace should feel.</p>
   </div>
-  <tng-button-toggle-group
-    class="doc-cmp-button-toggle-density-group"
-    ariaLabel="Editor density"
-    [value]="selectedPlainDensity()"
-    (valueChange)="onPlainDensityChange($event)"
-  >
-    <tng-button-toggle class="doc-cmp-button-toggle-density-item" [tngButtonToggleValue]="'compact'">Compact</tng-button-toggle>
-    <tng-button-toggle class="doc-cmp-button-toggle-density-item" [tngButtonToggleValue]="'comfortable'">Comfortable</tng-button-toggle>
-    <tng-button-toggle class="doc-cmp-button-toggle-density-item" [tngButtonToggleValue]="'spacious'">Spacious</tng-button-toggle>
-  </tng-button-toggle-group>
+  <div class="doc-cmp-button-toggle-density-group">
+    <tng-button-toggle-group
+      ariaLabel="Editor density"
+      [value]="selectedPlainDensity()"
+      (valueChange)="onPlainDensityChange($event)"
+    >
+      <tng-button-toggle [tngButtonToggleValue]="'compact'">Compact</tng-button-toggle>
+      <tng-button-toggle [tngButtonToggleValue]="'comfortable'">Comfortable</tng-button-toggle>
+      <tng-button-toggle [tngButtonToggleValue]="'spacious'">Spacious</tng-button-toggle>
+    </tng-button-toggle-group>
+  </div>
   <p class="doc-cmp-button-toggle-density-card__summary">Selected: {{ selectedPlainDensity() }}</p>
 </section>
+
+
 <br/>
+
 <section class="doc-cmp-button-toggle-release-card">
   <div class="doc-cmp-button-toggle-release-card__header">
     <h3 class="doc-cmp-button-toggle-release-card__title">Release target</h3>
     <p class="doc-cmp-button-toggle-release-card__body">Use host-level semantic tokens when one action needs stronger emphasis.</p>
   </div>
-  <tng-button-toggle-group
-    class="doc-cmp-button-toggle-release-group"
-    ariaLabel="Release target"
-    [value]="selectedPlainReleaseTarget()"
-    (valueChange)="onPlainReleaseTargetChange($event)"
-  >
-    <tng-button-toggle class="doc-cmp-button-toggle-release-item" [tngButtonToggleValue]="'ship-now'">Ship now</tng-button-toggle>
-    <tng-button-toggle class="doc-cmp-button-toggle-release-item doc-cmp-button-toggle-release-item--critical" [tngButtonToggleValue]="'review'">Compliance review</tng-button-toggle>
-  </tng-button-toggle-group>
+  <div class="doc-cmp-button-toggle-release-group">
+    <tng-button-toggle-group
+      ariaLabel="Release target"
+      [value]="selectedPlainReleaseTarget()"
+      (valueChange)="onPlainReleaseTargetChange($event)"
+    >
+      <tng-button-toggle [tngButtonToggleValue]="'ship-now'">Ship now</tng-button-toggle>
+      <div class="doc-cmp-button-toggle-release-item--critical"><tng-button-toggle [tngButtonToggleValue]="'review'">Compliance review</tng-button-toggle></div>
+    </tng-button-toggle-group>
+  </div>
 </section>
+
+
 <br/>
+
 <section class="doc-cmp-button-toggle-formatting-card">
   <h3 class="doc-cmp-button-toggle-formatting-card__title">Formatting toolbar</h3>
-  <tng-button-toggle-group
-    class="doc-cmp-button-toggle-formatting-group"
-    ariaLabel="Formatting toolbar"
-    type="multiple"
-    [values]="selectedPlainTextStyles()"
-    (valuesChange)="onPlainTextStylesChange($event)"
-  >
-    <tng-button-toggle class="doc-cmp-button-toggle-formatting-item" [tngButtonToggleValue]="'bold'">Bold</tng-button-toggle>
-    <tng-button-toggle class="doc-cmp-button-toggle-formatting-item" [tngButtonToggleValue]="'italic'">Italic</tng-button-toggle>
-    <tng-button-toggle class="doc-cmp-button-toggle-formatting-item" [tngButtonToggleValue]="'underline'">Underline</tng-button-toggle>
-  </tng-button-toggle-group>
+  <div class="doc-cmp-button-toggle-formatting-group">
+    <tng-button-toggle-group
+      ariaLabel="Formatting toolbar"
+      type="multiple"
+      [values]="selectedPlainTextStyles()"
+      (valuesChange)="onPlainTextStylesChange($event)"
+    >
+      <tng-button-toggle [tngButtonToggleValue]="'bold'">Bold</tng-button-toggle>
+      <tng-button-toggle [tngButtonToggleValue]="'italic'">Italic</tng-button-toggle>
+      <tng-button-toggle [tngButtonToggleValue]="'underline'">Underline</tng-button-toggle>
+    </tng-button-toggle-group>
+  </div>
   <p class="doc-cmp-button-toggle-formatting-card__summary">Active: {{ selectedPlainTextStyles().join(", ") }}</p>
 </section>
+
