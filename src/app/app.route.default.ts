@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'chips';
+export const DEFAULT_ROUTE = 'input-otp';
