@@ -1,70 +1,73 @@
-<section class="docs-component-selectbox-overview-plain-shell">
-  <div class="docs-component-selectbox-overview-plain-header">
-    <span class="docs-component-selectbox-overview-plain-kicker">Workflow stage</span>
-    <p class="docs-component-selectbox-overview-plain-copy">
+Select component examples.
+<section class="docs-component-select-overview-plain-shell">
+  <div class="docs-component-select-overview-plain-header">
+    <span class="docs-component-select-overview-plain-kicker">Workflow stage</span>
+    <p class="docs-component-select-overview-plain-copy">
       Wrapper-first single selection with a light shell and a committed value summary.
     </p>
   </div>
 
-  <tng-select
-    class="docs-component-selectbox-overview-plain-control"
-    [options]="componentSelectboxOverviewPlainWorkflowStages"
-    [value]="componentSelectboxOverviewPlainSelectedStage()"
-    (valueChange)="onComponentSelectboxOverviewPlainSelectedStageChange($event)"
-    [getOptionValue]="getComponentSelectboxOverviewPlainWorkflowStageValue"
-    [getOptionLabel]="getComponentSelectboxOverviewPlainWorkflowStageLabel"
-    [isOptionDisabled]="isComponentSelectboxOverviewPlainWorkflowStageDisabled"
-    placeholder="Choose workflow stage"
-    [ariaLabel]="'Workflow stage'"
-  >
-    <ng-template #tngSelectOptionTpl let-option>
-      <span class="docs-component-selectbox-overview-plain-option-row">
-        <span class="docs-component-selectbox-overview-plain-option-label">{{ option.label }}</span>
-        <span class="docs-component-selectbox-overview-plain-option-meta">{{ option.option.note }}</span>
-      </span>
-    </ng-template>
-  </tng-select>
+  <div class="docs-component-select-overview-plain-control">
+    <tng-select
+      [options]="componentSelectOverviewPlainWorkflowStages"
+      [value]="componentSelectOverviewPlainSelectedStage()"
+      (valueChange)="onComponentSelectOverviewPlainSelectedStageChange($event)"
+      [getOptionValue]="getComponentSelectOverviewPlainWorkflowStageValue"
+      [getOptionLabel]="getComponentSelectOverviewPlainWorkflowStageLabel"
+      [isOptionDisabled]="isComponentSelectOverviewPlainWorkflowStageDisabled"
+      placeholder="Choose workflow stage"
+      [ariaLabel]="'Workflow stage'"
+    >
+      <ng-template #tngSelectOptionTpl let-option>
+        <span class="docs-component-select-overview-plain-option-row">
+          <span class="docs-component-select-overview-plain-option-label">{{ option.label }}</span>
+          <span class="docs-component-select-overview-plain-option-meta">{{ option.option.note }}</span>
+        </span>
+      </ng-template>
+    </tng-select>
+  </div>
 
-  <p class="docs-component-selectbox-overview-plain-summary">
-    Selected: {{ componentSelectboxOverviewPlainSelectedStageSummary() }}
+  <p class="docs-component-select-overview-plain-summary">
+    Selected: {{ componentSelectOverviewPlainSelectedStageSummary() }}
   </p>
 </section>
 <br/>
-
-<section class="docs-component-selectbox-examples-owner-plain-shell">
-  <div class="docs-component-selectbox-examples-owner-plain-header">
-    <span class="docs-component-selectbox-examples-owner-plain-kicker">Release owner roster</span>
-    <p class="docs-component-selectbox-examples-owner-plain-copy">
+<!-- Select component examples with custom templates -->
+<section class="docs-component-select-examples-owner-plain-shell">
+  <div class="docs-component-select-examples-owner-plain-header">
+    <span class="docs-component-select-examples-owner-plain-kicker">Release owner roster</span>
+    <p class="docs-component-select-examples-owner-plain-copy">
       Custom templates let the wrapper show richer trigger and option content without rebuilding the select primitive.
     </p>
   </div>
 
-  <tng-select
-    class="docs-component-selectbox-examples-owner-plain-control"
-    [options]="componentSelectboxExamplesPlainReleaseOwners"
-    [value]="componentSelectboxExamplesPlainSelectedOwnerId()"
-    (valueChange)="onComponentSelectboxExamplesPlainSelectedOwnerChange($event)"
-    [getOptionValue]="getComponentSelectboxExamplesPlainOwnerValue"
-    [getOptionLabel]="getComponentSelectboxExamplesPlainOwnerLabel"
-    [isOptionDisabled]="isComponentSelectboxExamplesPlainOwnerDisabled"
-    placeholder="Assign release owner"
-    [ariaLabel]="'Release owner roster'"
-  >
-    <ng-template #tngSelectValueTpl let-selected>
-      <div class="docs-component-selectbox-examples-owner-plain-value-row">
-        <strong>{{ selected.label }}</strong>
-        <small>{{ selected.option?.team }}</small>
-      </div>
-    </ng-template>
+  <div class="docs-component-select-examples-owner-plain-control">
+    <tng-select
+      [options]="componentSelectExamplesPlainReleaseOwners"
+      [value]="componentSelectExamplesPlainSelectedOwnerId()"
+      (valueChange)="onComponentSelectExamplesPlainSelectedOwnerChange($event)"
+      [getOptionValue]="getComponentSelectExamplesPlainOwnerValue"
+      [getOptionLabel]="getComponentSelectExamplesPlainOwnerLabel"
+      [isOptionDisabled]="isComponentSelectExamplesPlainOwnerDisabled"
+      placeholder="Assign release owner"
+      [ariaLabel]="'Release owner roster'"
+    >
+      <ng-template #tngSelectValueTpl let-selected>
+        <div class="docs-component-select-examples-owner-plain-value-row">
+          <strong>{{ selected.label }}</strong>
+          <small>{{ selected.option?.team }}</small>
+        </div>
+      </ng-template>
 
-    <ng-template #tngSelectOptionTpl let-option>
-      <div class="docs-component-selectbox-examples-owner-plain-option-row">
-        <span class="docs-component-selectbox-examples-owner-plain-option-label">{{ option.label }}</span>
-        <small class="docs-component-selectbox-examples-owner-plain-option-meta">{{ option.option.team }} · {{ option.option.timezone }}</small>
-      </div>
-    </ng-template>
-  </tng-select>
+      <ng-template #tngSelectOptionTpl let-option>
+        <div class="docs-component-select-examples-owner-plain-option-row">
+          <span class="docs-component-select-examples-owner-plain-option-label">{{ option.label }}</span>
+          <small class="docs-component-select-examples-owner-plain-option-meta">{{ option.option.team }} · {{ option.option.timezone }}</small>
+        </div>
+      </ng-template>
+    </tng-select>
+  </div>
 
-  <p class="docs-component-selectbox-examples-owner-plain-summary">Selected: {{ componentSelectboxExamplesPlainSelectedOwnerSummary() }}</p>
+  <p class="docs-component-select-examples-owner-plain-summary">Selected: {{ componentSelectExamplesPlainSelectedOwnerSummary() }}</p>
 </section>
 <br/>
