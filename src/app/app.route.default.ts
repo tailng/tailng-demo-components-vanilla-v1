@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'listbox';
+export const DEFAULT_ROUTE = 'autocomplete';

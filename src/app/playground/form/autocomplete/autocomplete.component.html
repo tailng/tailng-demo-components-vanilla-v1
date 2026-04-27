@@ -6,21 +6,23 @@
     </p>
   </div>
 
-  <tng-autocomplete
-    class="docs-autocomplete-overview-example__control"
-    [options]="countries"
-    [value]="selectedCountry()"
-    (valueChange)="onSelectedCountryChange($event)"
-    [getOptionValue]="getCountryValue"
-    [getOptionLabel]="getCountryLabel"
-    placeholder="Type Ind to filter"
-    [ariaLabel]="'Country directory'"
-  ></tng-autocomplete>
+  <div class="docs-autocomplete-overview-example__control">
+    <tng-autocomplete
+      [options]="countries"
+      [value]="selectedCountry()"
+      (valueChange)="onSelectedCountryChange($event)"
+      [getOptionValue]="getCountryValue"
+      [getOptionLabel]="getCountryLabel"
+      placeholder="Type Ind to filter"
+      [ariaLabel]="'Country directory'"
+    ></tng-autocomplete>
+  </div>
 
   <p class="docs-autocomplete-overview-example__summary">
     Selected: {{ selectedLabel() }}
   </p>
 </section>
+
 
 <br/>
 
@@ -32,17 +34,18 @@
     </p>
   </div>
 
-  <tng-autocomplete
-    class="docs-autocomplete-styling-example__control"
-    [options]="releaseOwners"
-    [value]="selectedOwner()"
-    (valueChange)="onSelectedOwnerChange($event)"
-    [getOptionValue]="getOwnerValue"
-    [getOptionLabel]="getOwnerLabel"
-    [isOptionDisabled]="isOwnerDisabled"
-    placeholder="Assign a release owner"
-    [ariaLabel]="'Release owner'"
-  ></tng-autocomplete>
+  <div class="docs-autocomplete-styling-example__control">
+    <tng-autocomplete
+      [options]="releaseOwners"
+      [value]="selectedOwner()"
+      (valueChange)="onSelectedOwnerChange($event)"
+      [getOptionValue]="getOwnerValue"
+      [getOptionLabel]="getOwnerLabel"
+      [isOptionDisabled]="isOwnerDisabled"
+      placeholder="Assign a release owner"
+      [ariaLabel]="'Release owner'"
+    ></tng-autocomplete>
+  </div>
 
   <p class="docs-autocomplete-styling-example__summary">
     Selected: {{ selectedSummary() }}
