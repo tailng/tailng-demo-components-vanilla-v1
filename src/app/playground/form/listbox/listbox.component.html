@@ -1,39 +1,46 @@
+<!-- Listbox component examples. -->
 <section class="docs-listbox-overview-example">
-  <tng-listbox
-    class="docs-listbox-overview-example__listbox"
-    ariaLabel="Capability checklist"
-    [multiple]="true"
-    [options]="capabilityOptions"
-    [value]="selectedCapabilities()"
-    (valueChange)="onSelectedCapabilitiesChange($event)"
-  ></tng-listbox>
+  <div class="docs-listbox-overview-example__listbox">
+    <tng-listbox
+      ariaLabel="Capability checklist"
+      [multiple]="true"
+      [options]="capabilityOptions"
+      [value]="selectedCapabilities()"
+      (valueChange)="onSelectedCapabilitiesChange($event)"
+    ></tng-listbox>
+  </div>
   <p class="docs-listbox-overview-example__summary">
     Selected: {{ selectedSummary() }}
   </p>
 </section>
+
 <br/>
+
 <div class="docs-listbox-dual-handoff-example">
   <section class="docs-listbox-dual-handoff-example__card">
     <h2 class="docs-listbox-dual-handoff-example__title">Publish channels A</h2>
-    <tng-listbox
-      class="docs-listbox-dual-handoff-example__listbox docs-listbox-dual-handoff-example__listbox--dark"
-      ariaLabel="Publish channels A"
-      [options]="channelOptions"
-      [value]="selectedChannelA()"
-      (valueChange)="onSelectedChannelAChange($event)"
-    ></tng-listbox>
+    <div class="docs-listbox-dual-handoff-example__listbox docs-listbox-dual-handoff-example__listbox--dark">
+      <tng-listbox
+        ariaLabel="Publish channels A"
+        [options]="channelOptions"
+        [value]="selectedChannelA()"
+        (valueChange)="onSelectedChannelAChange($event)"
+      ></tng-listbox>
+    </div>
     <p class="docs-listbox-dual-handoff-example__summary">selected: {{ selectedChannelSummaryA() }}</p>
   </section>
 
   <section class="docs-listbox-dual-handoff-example__card">
     <h2 class="docs-listbox-dual-handoff-example__title">Publish channels B</h2>
-    <tng-listbox
-      class="docs-listbox-dual-handoff-example__listbox docs-listbox-dual-handoff-example__listbox--dark"
-      ariaLabel="Publish channels B"
-      [options]="channelOptions"
-      [value]="selectedChannelB()"
-      (valueChange)="onSelectedChannelBChange($event)"
-    ></tng-listbox>
+    <div class="docs-listbox-dual-handoff-example__listbox docs-listbox-dual-handoff-example__listbox--dark">
+      <tng-listbox
+        ariaLabel="Publish channels B"
+        [options]="channelOptions"
+        [value]="selectedChannelB()"
+        (valueChange)="onSelectedChannelBChange($event)"
+      ></tng-listbox>
+    </div>
     <p class="docs-listbox-dual-handoff-example__summary">selected: {{ selectedChannelSummaryB() }}</p>
   </section>
 </div>
+
