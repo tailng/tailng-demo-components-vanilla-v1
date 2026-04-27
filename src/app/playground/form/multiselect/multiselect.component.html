@@ -1,20 +1,24 @@
+<!-- Multiselect component template -->
 <section class="shell">
   <div class="header">
     <span class="kicker">Planet picker</span>
     <p class="copy">Wrapper-first multi-selection with a light shell.</p>
   </div>
 
-  <tng-multiselect
-    class="control"
-    [options]="planets"
-    [value]="selectedPlanets()"
-    (valueChange)="onValueChange($event)"
-    [getOptionValue]="getPlanetValue"
-    [getOptionLabel]="getPlanetLabel"
-    placeholder="Select planets"
-  ></tng-multiselect>
+  <div class="control">
+    <tng-multiselect
+      [options]="planets"
+      [value]="selectedPlanets()"
+      (valueChange)="onValueChange($event)"
+      [getOptionValue]="getPlanetValue"
+      [getOptionLabel]="getPlanetLabel"
+      placeholder="Select planets"
+    ></tng-multiselect>
+  </div>
 </section>
-<br/>
+
+<br />
+<!-- Dual multiselect example -->
 <section class="dual-multiselect-plain-shell">
   <div class="dual-multiselect-plain-header">
     <span class="dual-multiselect-plain-kicker">Dual tag groups</span>
@@ -26,31 +30,33 @@
   <div class="dual-multiselect-plain-grid">
     <div class="dual-multiselect-plain-card">
       <p class="dual-multiselect-plain-card-title">Tag group A</p>
-      <tng-multiselect
-        class="dual-multiselect-plain-control"
-        [options]="tagOptions"
-        [value]="tagValueA()"
-        (valueChange)="onTagAValueChange($event)"
-        [getOptionValue]="getTagValue"
-        [getOptionLabel]="getTagLabel"
-        placeholder="Select tags"
-        aria-label="Tag group A multiselect"
-      ></tng-multiselect>
+      <div class="dual-multiselect-plain-control">
+        <tng-multiselect
+          [options]="tagOptions"
+          [value]="tagValueA()"
+          (valueChange)="onTagAValueChange($event)"
+          [getOptionValue]="getTagValue"
+          [getOptionLabel]="getTagLabel"
+          placeholder="Select tags"
+          aria-label="Tag group A multiselect"
+        ></tng-multiselect>
+      </div>
       <p class="dual-multiselect-plain-summary">Selected: {{ tagSummaryA() }}</p>
     </div>
 
     <div class="dual-multiselect-plain-card">
       <p class="dual-multiselect-plain-card-title">Tag group B</p>
-      <tng-multiselect
-        class="dual-multiselect-plain-control"
-        [options]="tagOptions"
-        [value]="tagValueB()"
-        (valueChange)="onTagBValueChange($event)"
-        [getOptionValue]="getTagValue"
-        [getOptionLabel]="getTagLabel"
-        placeholder="Select tags"
-        aria-label="Tag group B multiselect"
-      ></tng-multiselect>
+      <div class="dual-multiselect-plain-control">
+        <tng-multiselect
+          [options]="tagOptions"
+          [value]="tagValueB()"
+          (valueChange)="onTagBValueChange($event)"
+          [getOptionValue]="getTagValue"
+          [getOptionLabel]="getTagLabel"
+          placeholder="Select tags"
+          aria-label="Tag group B multiselect"
+        ></tng-multiselect>
+      </div>
       <p class="dual-multiselect-plain-summary">Selected: {{ tagSummaryB() }}</p>
     </div>
   </div>
