@@ -1,3 +1,4 @@
+<!-- Multi Autocomplete component demo template. -->
 <section class="docs-multi-autocomplete-overview-plain-shell">
   <div class="docs-multi-autocomplete-overview-plain-header">
     <span class="docs-multi-autocomplete-overview-plain-kicker">Launch markets</span>
@@ -6,21 +7,23 @@
     </p>
   </div>
 
-  <tng-multi-autocomplete
-    class="docs-multi-autocomplete-overview-plain-control"
-    [options]="componentOverviewPlainLaunchMarkets"
-    [value]="componentOverviewPlainSelectedMarketCodes()"
-    (valueChange)="onComponentOverviewPlainSelectedMarketsChange($event)"
-    [getOptionValue]="getComponentOverviewPlainMarketValue"
-    [getOptionLabel]="getComponentOverviewPlainMarketLabel"
-    placeholder="Search launch markets"
-    [ariaLabel]="'Launch markets'"
-  ></tng-multi-autocomplete>
+  <div class="docs-multi-autocomplete-overview-plain-control">
+    <tng-multi-autocomplete
+      [options]="componentOverviewPlainLaunchMarkets"
+      [value]="componentOverviewPlainSelectedMarketCodes()"
+      (valueChange)="onComponentOverviewPlainSelectedMarketsChange($event)"
+      [getOptionValue]="getComponentOverviewPlainMarketValue"
+      [getOptionLabel]="getComponentOverviewPlainMarketLabel"
+      placeholder="Search launch markets"
+      [ariaLabel]="'Launch markets'"
+    ></tng-multi-autocomplete>
+  </div>
 
   <p class="docs-multi-autocomplete-overview-plain-summary">Selected: {{ componentOverviewPlainSelectedMarketSummary() }}</p>
 </section>
-<br/>
 
+<br/>
+<!-- Multi Autocomplete component styling demo template. -->
 <section class="docs-multi-autocomplete-styling-plain-shell">
   <div class="docs-multi-autocomplete-styling-plain-header">
     <span class="docs-multi-autocomplete-styling-plain-kicker">Release owners</span>
@@ -29,17 +32,18 @@
     </p>
   </div>
 
-  <tng-multi-autocomplete
-    class="docs-multi-autocomplete-styling-plain-control"
-    [options]="componentStylingPlainReleaseOwners"
-    [value]="componentStylingPlainSelectedOwnerIds()"
-    (valueChange)="onComponentStylingPlainSelectedOwnersChange($event)"
-    [getOptionValue]="getComponentStylingPlainOwnerValue"
-    [getOptionLabel]="getComponentStylingPlainOwnerLabel"
-    [isOptionDisabled]="isComponentStylingPlainOwnerDisabled"
-    placeholder="Assign release owners"
-    [ariaLabel]="'Release owners'"
-  ></tng-multi-autocomplete>
+  <div class="docs-multi-autocomplete-styling-plain-control">
+    <tng-multi-autocomplete
+      [options]="componentStylingPlainReleaseOwners"
+      [value]="componentStylingPlainSelectedOwnerIds()"
+      (valueChange)="onComponentStylingPlainSelectedOwnersChange($event)"
+      [getOptionValue]="getComponentStylingPlainOwnerValue"
+      [getOptionLabel]="getComponentStylingPlainOwnerLabel"
+      [isOptionDisabled]="isComponentStylingPlainOwnerDisabled"
+      placeholder="Assign release owners"
+      [ariaLabel]="'Release owners'"
+    ></tng-multi-autocomplete>
+  </div>
 
   <p class="docs-multi-autocomplete-styling-plain-summary">Selected: {{ componentStylingPlainSelectedOwnerSummary() }}</p>
 </section>
