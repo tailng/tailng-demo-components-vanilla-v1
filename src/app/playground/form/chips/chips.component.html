@@ -1,3 +1,4 @@
+<!-- Chips Example Template -->
 <section class="docs-component-chips-overview-plain-shell">
   <div class="docs-component-chips-overview-plain-header">
     <span class="docs-component-chips-overview-plain-kicker">Selected topics</span>
@@ -6,25 +7,28 @@
     </p>
   </div>
 
-  <tng-chips
-    class="docs-component-chips-overview-plain-control"
-    [values]="componentChipsOverviewPlainSelectedTopics()"
-    (valuesChange)="onComponentChipsOverviewPlainValuesChange($event)"
-    [ariaLabel]="'Selected topics'"
-  >
-    <div class="docs-component-chips-overview-plain-row">
-      @for (topic of componentChipsOverviewPlainSelectedTopics(); track topic) {
-        <span tngChip [tngChipValue]="topic" [tngChipLabel]="topic" class="docs-component-chips-overview-plain-chip">
-          <span>{{ topic }}</span>
-          <button tngChipRemove type="button" class="docs-component-chips-overview-plain-chip-remove">&times;</button>
-        </span>
-      }
-    </div>
-  </tng-chips>
+  <div class="docs-component-chips-overview-plain-control">
+    <tng-chips
+      [values]="componentChipsOverviewPlainSelectedTopics()"
+      (valuesChange)="onComponentChipsOverviewPlainValuesChange($event)"
+      [ariaLabel]="'Selected topics'"
+    >
+      <div class="docs-component-chips-overview-plain-row">
+        @for (topic of componentChipsOverviewPlainSelectedTopics(); track topic) {
+          <span tngChip [tngChipValue]="topic" [tngChipLabel]="topic" class="docs-component-chips-overview-plain-chip">
+            <span>{{ topic }}</span>
+            <button tngChipRemove type="button" class="docs-component-chips-overview-plain-chip-remove">&times;</button>
+          </span>
+        }
+      </div>
+    </tng-chips>
+  </div>
 
   <p class="docs-component-chips-overview-plain-summary">Selected: {{ componentChipsOverviewPlainSummary() }}</p>
 </section>
+
 <br/>
+
 <section class="docs-component-chips-examples-locked-plain-shell">
   <div class="docs-component-chips-examples-locked-plain-header">
     <span class="docs-component-chips-examples-locked-plain-kicker">Release lanes</span>
@@ -33,27 +37,28 @@
     </p>
   </div>
 
-  <tng-chips
-    class="docs-component-chips-examples-locked-plain-control"
-    [values]="componentChipsExamplesPlainReleaseLanes()"
-    (valuesChange)="onComponentChipsExamplesPlainReleaseLanesChange($event)"
-    [ariaLabel]="'Release lanes'"
-  >
-    <div class="docs-component-chips-examples-locked-plain-row">
-      @for (lane of componentChipsExamplesPlainReleaseLanes(); track lane) {
-        <span
-          tngChip
-          [tngChipValue]="lane"
-          [tngChipLabel]="lane"
-          [tngChipDisabled]="isComponentChipsExamplesPlainReleaseLaneLocked(lane)"
-          class="docs-component-chips-examples-locked-plain-chip"
-        >
-          <span>{{ lane }}</span>
-          <button tngChipRemove type="button" class="docs-component-chips-examples-locked-plain-chip-remove">&times;</button>
-        </span>
-      }
-    </div>
-  </tng-chips>
+  <div class="docs-component-chips-examples-locked-plain-control">
+    <tng-chips
+      [values]="componentChipsExamplesPlainReleaseLanes()"
+      (valuesChange)="onComponentChipsExamplesPlainReleaseLanesChange($event)"
+      [ariaLabel]="'Release lanes'"
+    >
+      <div class="docs-component-chips-examples-locked-plain-row">
+        @for (lane of componentChipsExamplesPlainReleaseLanes(); track lane) {
+          <span
+            tngChip
+            [tngChipValue]="lane"
+            [tngChipLabel]="lane"
+            [tngChipDisabled]="isComponentChipsExamplesPlainReleaseLaneLocked(lane)"
+            class="docs-component-chips-examples-locked-plain-chip"
+          >
+            <span>{{ lane }}</span>
+            <button tngChipRemove type="button" class="docs-component-chips-examples-locked-plain-chip-remove">&times;</button>
+          </span>
+        }
+      </div>
+    </tng-chips>
+  </div>
 
   <p class="docs-component-chips-examples-locked-plain-summary">Selected: {{ componentChipsExamplesPlainReleaseLaneSummary() }}</p>
 </section>
