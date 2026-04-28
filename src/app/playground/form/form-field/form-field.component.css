@@ -1,174 +1,141 @@
-.demo-page {
-  padding: 1rem;
-}
-
-.form-field-example-field-surface {
+.doc-cmp-form-field-layout {
   display: grid;
-  gap: 0.5rem;
-  padding: 0.9rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 0.95rem;
-  background: rgba(255, 255, 255, 0.88);
+  gap: 1.5rem;
+  width: min(100%, 46rem);
+  margin-inline: auto;
+  align-items: start;
 }
 
-.form-field-example-field-label {
-  color: #64748b;
-  font-size: 0.78rem;
+.doc-cmp-form-field-layout > * {
+  width: 100%;
+}
+/* Form field component styles */
+.doc-cmp-form-field-ov-plain-card {
+  display: grid;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 1.15rem;
+  border: 1px solid var(--tng-semantic-border-subtle);
+  border-radius: 1.25rem;
+  background: var(--tng-semantic-background-surface);
+  color: var(--tng-semantic-foreground-primary);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--tng-semantic-foreground-primary) 8%, transparent);
+}
+
+.doc-cmp-form-field-ov-plain-label {
+  color: var(--tng-semantic-foreground-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.doc-cmp-form-field-ov-plain-shell {
+  width: 100%;
+  --tng-input-bg: var(--tng-semantic-background-surface);
+  --tng-input-border: var(--tng-semantic-border-subtle);
+  --tng-input-radius: 0.9rem;
+  --tng-input-min-height: 2.85rem;
+  --tng-input-px: 0.95rem;
+  --tng-input-gap: 0.65rem;
+  --tng-input-fg: var(--tng-semantic-foreground-primary);
+  --tng-input-focus-ring: color-mix(in srgb, var(--tng-semantic-focus-ring) 24%, transparent);
+  --tng-input-font-size: 0.96rem;
+  --tng-input-line-height: 1.45;
+  --tng-input-placeholder: var(--tng-semantic-foreground-muted);
+}
+
+.doc-cmp-form-field-ov-plain-shell tng-form-field {
+  display: block;
+  width: 95%;
+}
+
+.doc-cmp-form-field-ov-plain-prefix,
+.doc-cmp-form-field-ov-plain-meta {
+  color: var(--tng-semantic-foreground-secondary);
+}
+
+.doc-cmp-form-field-ov-plain-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.doc-cmp-form-field-ov-plain-meta {
+  font-size: 0.8rem;
   font-weight: 600;
-}
-
-.form-field-example-shell--plain {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
-.form-field-example-shell--plain tng-form-field,
-.form-field-example-shell--plain [data-slot='form-field-wrapper'] {
-  display: block;
-  width: 100%;
+  white-space: nowrap;
 }
 
 /*
 Form field example
 */
-.doc-cmp-form-field-st-workspace-field { display: grid; gap: 0.5rem; width: min(100%, 31rem); }
+.doc-cmp-form-field-st-workspace-field {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
 .doc-cmp-form-field-st-workspace-label {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--tng-semantic-foreground-secondary);
 }
-.doc-cmp-form-field-st-workspace-shell [data-slot="input-group"] {
-  min-height: 2.55rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--tng-semantic-border-strong);
-  background: var(--tng-semantic-background-base);
-  padding-inline: 0.8rem;
+
+.doc-cmp-form-field-st-workspace-shell {
+  width: 100%;
+  --tng-input-bg: var(--tng-semantic-background-surface);
+  --tng-input-border: var(--tng-semantic-border-subtle);
+  --tng-input-radius: 0.78rem;
+  --tng-input-min-height: 2.65rem;
+  --tng-input-px: 0.85rem;
+  --tng-input-gap: 0.55rem;
+  --tng-input-fg: var(--tng-semantic-foreground-primary);
+  --tng-input-focus-ring: color-mix(in srgb, var(--tng-semantic-focus-ring) 24%, transparent);
+  --tng-input-placeholder: var(--tng-semantic-foreground-muted);
 }
-.doc-cmp-form-field-st-workspace-shell [data-slot="input-group"][data-focused] {
-  border-color: var(--tng-semantic-accent-brand);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tng-semantic-accent-brand) 18%, transparent);
-}
-.doc-cmp-form-field-st-workspace-shell [data-slot="input"] {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
+
+.doc-cmp-form-field-st-workspace-shell tng-form-field {
   display: block;
-  font: inherit;
-  min-width: 0;
-  outline: none;
-  padding: 0;
   width: 100%;
 }
-.doc-cmp-form-field-st-workspace-meta { font-size: 0.8rem; font-weight: 600; }
-/*
-Search Example
-*/
-.doc-cmp-form-field-ex-search-shell [data-slot="input-group"] {
-  border: 1px solid var(--tng-semantic-border-strong);
-  background: var(--tng-semantic-background-base);
-  border-radius: 0.78rem;
-  min-height: 2.65rem;
-  padding-inline: 0.85rem;
-  box-shadow: none;
-}
-.doc-cmp-form-field-ex-search-shell [data-slot="input-group"][data-focused] {
-  border-color: var(--tng-semantic-accent-brand);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tng-semantic-accent-brand) 18%, transparent);
-}
-.doc-cmp-form-field-ex-search-shell [data-slot="input"] {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
-  display: block;
-  font: inherit;
-  min-width: 0;
-  outline: none;
-  padding: 0;
-  width: 100%;
-}
-.doc-cmp-form-field-ex-search-icon { height: 1.1rem; width: 1.1rem; }
-.doc-cmp-form-field-ex-search-meta {
+
+.doc-cmp-form-field-st-workspace-meta {
   color: var(--tng-semantic-foreground-secondary);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /*
-Slug field example
+Search Example
 */
-.doc-cmp-form-field-ex-workspace-shell [data-slot="input-group"] {
-  border: 1px solid var(--tng-semantic-border-strong);
-  background: var(--tng-semantic-background-base);
-  border-radius: 0.78rem;
-  min-height: 2.65rem;
-  padding-inline: 0.85rem;
-  box-shadow: none;
+.doc-cmp-form-field-ex-clear-shell {
+  width: 100%;
+  --tng-input-bg: var(--tng-semantic-background-surface);
+  --tng-input-border: var(--tng-semantic-border-subtle);
+  --tng-input-radius: 0.85rem;
+  --tng-input-min-height: 2.7rem;
+  --tng-input-px: 0.9rem;
+  --tng-input-gap: 0.55rem;
+  --tng-input-fg: var(--tng-semantic-foreground-primary);
+  --tng-input-focus-ring: color-mix(in srgb, var(--tng-semantic-focus-ring) 24%, transparent);
 }
-.doc-cmp-form-field-ex-workspace-shell [data-slot="input-group"][data-focused] {
-  border-color: var(--tng-semantic-accent-brand);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tng-semantic-accent-brand) 18%, transparent);
-}
-.doc-cmp-form-field-ex-workspace-shell [data-slot="input"] {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
+
+.doc-cmp-form-field-ex-clear-shell tng-form-field {
   display: block;
-  font: inherit;
-  min-width: 0;
-  outline: none;
-  padding: 0;
   width: 100%;
 }
-.doc-cmp-form-field-ex-workspace-meta {
-  color: var(--tng-semantic-foreground-secondary);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-/*
-Clear Acrtion
-*/
-.doc-cmp-form-field-ex-clear-shell [data-slot="input-group"] {
-  border: 1px solid var(--tng-semantic-border-strong);
-  background: var(--tng-semantic-background-base);
-  border-radius: 0.78rem;
-  min-height: 2.65rem;
-  padding-inline: 0.85rem;
-  box-shadow: none;
-}
-.doc-cmp-form-field-ex-clear-shell [data-slot="input-group"][data-focused] {
-  border-color: var(--tng-semantic-accent-brand);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tng-semantic-accent-brand) 18%, transparent);
-}
-.doc-cmp-form-field-ex-clear-shell [data-slot="input"] {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
-  display: block;
-  font: inherit;
-  min-width: 0;
-  outline: none;
-  padding: 0;
-  width: 100%;
-}
+
 .doc-cmp-form-field-ex-clear-action {
   border: 0;
-  border-radius: 0.5rem;
+  border-radius: 0.55rem;
   background: transparent;
   color: var(--tng-semantic-foreground-secondary);
-  padding: 0.3rem 0.55rem;
   font-size: 0.78rem;
   font-weight: 600;
+  padding: 0.35rem 0.6rem;
 }
+
 .doc-cmp-form-field-ex-clear-action:hover {
-  background: color-mix(in srgb, var(--tng-semantic-background-muted) 62%, transparent);
+  background: color-mix(in srgb, var(--tng-semantic-foreground-secondary) 14%, transparent);
   color: var(--tng-semantic-foreground-primary);
 }
