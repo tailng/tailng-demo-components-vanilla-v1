@@ -1,4 +1,68 @@
-<section class="demo-page">
-  <h1>Card</h1>
-  <p>Card playground page.</p>
-</section>
+<!-- Plain status card -->
+<div class="card-preview-shell card-preview-shell--plain">
+  <tng-card variant="outline" tone="info" padding="md">
+    <tng-card-header>
+      <tng-card-title>Release status</tng-card-title>
+      <tng-card-description
+        >Production rollout is complete and monitoring is stable.</tng-card-description
+      >
+    </tng-card-header>
+    <tng-card-content>
+      <ul>
+        <li>Latency is below 120ms across all regions.</li>
+        <li>Error rate remained under 0.2% for the last hour.</li>
+      </ul>
+    </tng-card-content>
+    <tng-card-footer>
+      <tng-card-actions>
+        <button type="button">View report</button>
+        <button type="button">Promote</button>
+      </tng-card-actions>
+    </tng-card-footer>
+  </tng-card>
+</div>
+<br />
+
+<!-- Media profile card -->
+<div class="card-example-shell card-example-shell--plain">
+  <tng-card variant="outline" tone="neutral" interactive>
+    <tng-card-media
+      ><div class="card-example__media-placeholder" aria-hidden="true">AV</div></tng-card-media
+    >
+    <tng-card-header>
+      <tng-card-title>Ava Mathews</tng-card-title>
+      <tng-card-description>Design systems engineer</tng-card-description>
+    </tng-card-header>
+    <tng-card-content>
+      <p>Building reusable interaction patterns across product teams.</p>
+    </tng-card-content>
+    <tng-card-footer>
+      <tng-card-actions>
+        <button type="button">Message</button>
+        <button type="button">Follow</button>
+      </tng-card-actions>
+    </tng-card-footer>
+  </tng-card>
+</div>
+
+<br />
+<!-- Action queue card -->
+<div class="card-example-shell card-example-shell--plain">
+  <tng-card variant="outline" tone="warning" padding="md">
+    <tng-card-header>
+      <tng-card-title>Billing reminder</tng-card-title>
+      <tng-card-description>Invoice #3912 is due in 2 days.</tng-card-description>
+    </tng-card-header>
+    <tng-card-content>
+      <p>Assign owner and send reminder before due date.</p>
+    </tng-card-content>
+    <tng-card-divider></tng-card-divider>
+    <tng-card-footer>
+      <tng-card-link href="#invoice">Open invoice</tng-card-link>
+      <tng-card-actions>
+        <button type="button">Snooze</button>
+        <button type="button">Assign owner</button>
+      </tng-card-actions>
+    </tng-card-footer>
+  </tng-card>
+</div>
