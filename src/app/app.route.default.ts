@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'card';
+export const DEFAULT_ROUTE = 'separator';
