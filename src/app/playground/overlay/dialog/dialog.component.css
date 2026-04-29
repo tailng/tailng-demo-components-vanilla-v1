@@ -1,7 +1,26 @@
-.demo-page {
-  padding: 1rem;
+/* Wrapper dialog */
+.dialog-trigger {
+  border-radius: 0.7rem;
+  min-height: 2.1rem;
+  padding: 0.45rem 0.9rem;
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+.dialog-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+/* Wrapper destructive confirmation */
+.dialog-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: flex-end;
+}
+
+.dialog-example-danger {
+  background: #dc2626;
+  color: #fff;
 }

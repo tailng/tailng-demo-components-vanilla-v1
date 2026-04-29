@@ -1,4 +1,41 @@
-<section class="demo-page">
-  <h1>Dialog</h1>
-  <p>Dialog playground page.</p>
-</section>
+<!-- Wrapper dialog -->
+<button type="button" class="dialog-trigger" (click)="reviewOpen.set(true)">
+  Open review dialog
+</button>
+
+<tng-dialog
+  title="Review changes"
+  description="Wrapper provides panel, backdrop, and close affordance out of the box."
+  [open]="reviewOpen()"
+  (openChange)="onOpenChange($event)"
+  (closed)="onClosed($event)"
+>
+  <p class="dialog-body-copy">Use the wrapper when your team wants quick defaults.</p>
+  <div class="dialog-preview-actions">
+    <button type="button" class="dialog-action-ghost" (click)="reviewOpen.set(false)">
+      Cancel
+    </button>
+    <button type="button" class="dialog-action-primary" (click)="reviewOpen.set(false)">
+      Apply
+    </button>
+  </div>
+</tng-dialog>
+
+<br />
+<br />
+<!-- Wrapper destructive confirmation -->
+<button type="button" class="dialog-example-trigger" (click)="deleteOpen.set(true)">
+  Delete release branch
+</button>
+
+<tng-dialog
+  title="Delete release branch?"
+  description="This action removes branch automation and cannot be undone."
+  [open]="deleteOpen()"
+  (openChange)="deleteOpen.set($event)"
+>
+  <div class="dialog-action-row">
+    <button type="button" class="dialog-example-secondary" (click)="onCancel()">Cancel</button>
+    <button type="button" class="dialog-example-danger" (click)="onApprove()">Delete</button>
+  </div>
+</tng-dialog>
