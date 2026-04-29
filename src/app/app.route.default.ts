@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'popover';
+export const DEFAULT_ROUTE = 'tooltip';

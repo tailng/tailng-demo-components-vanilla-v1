@@ -1,4 +1,24 @@
-<section class="demo-page">
-  <h1>Tooltip</h1>
-  <p>Tooltip playground page.</p>
-</section>
+<!-- Wrapper tooltip -->
+<div class="tooltip-shell tooltip-stage">
+  <tng-tooltip
+    triggerLabel="Plain CSS hint"
+    text="Wrapper tooltip with semantic token styling."
+    side="bottom"
+    [openDelay]="120"
+    [closeDelay]="80"
+    (openChange)="open.set($event)"
+  ></tng-tooltip>
+</div>
+
+<br />
+<!-- Wrapper archive tooltip -->
+<div class="tooltip-example-shell tooltip-example-stage">
+  <tng-tooltip
+    triggerLabel="Archive release notes"
+    text="Moves notes to readonly archive."
+    side="bottom"
+    [openDelay]="100"
+    [closeDelay]="80"
+    (openChange)="open.set($event)"
+  ></tng-tooltip>
+</div>

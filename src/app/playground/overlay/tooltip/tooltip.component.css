@@ -1,7 +1,12 @@
-.demo-page {
+/* Wrapper tooltip */
+.tooltip-shell {
+  border: 1px solid var(--tng-semantic-border-subtle);
+  border-radius: 0.95rem;
   padding: 1rem;
 }
-
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+/* Wrapper archive tooltip */
+.tooltip-example-shell {
+  border: 1px solid var(--tng-semantic-border-subtle);
+  border-radius: 0.95rem;
+  padding: 1rem;
 }
