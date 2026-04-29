@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'stepper';
+export const DEFAULT_ROUTE = 'drawer';

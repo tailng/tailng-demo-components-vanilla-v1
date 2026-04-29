@@ -1,4 +1,7 @@
-<section class="demo-page">
-  <h1>Drawer</h1>
-  <p>Drawer playground page.</p>
+<section tngDrawerContainer>
+  <tng-drawer [opened]="plainCssOpen()" (openedChange)="plainCssOpen.set($event)">
+    <nav>Navigation</nav>
+  </tng-drawer>
+  <main tngDrawerContent>Main content</main>
 </section>
+
