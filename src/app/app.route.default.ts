@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'accordion';
+export const DEFAULT_ROUTE = 'stepper';

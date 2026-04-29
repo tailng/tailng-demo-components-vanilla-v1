@@ -1,4 +1,33 @@
-<section class="demo-page">
-  <h1>Stepper</h1>
-  <p>Stepper playground page.</p>
-</section>
+<div class="stepper-preview-shell stepper-preview-shell--plain">
+  <tng-stepper ariaLabel="Release pipeline">
+    <ol class="stepper-preview-list">
+      <li class="stepper-preview-item is-complete"><span class="stepper-preview-dot">✓</span> Draft</li>
+      <li aria-current="step" class="stepper-preview-item is-current"><span class="stepper-preview-dot">2</span> Review</li>
+      <li class="stepper-preview-item"><span class="stepper-preview-dot">3</span> Publish</li>
+    </ol>
+  </tng-stepper>
+</div> 
+
+<br>
+
+<div class="stepper-example-shell stepper-example-shell--plain">
+  <tng-stepper ariaLabel="Release flow">
+    <ol class="stepper-example-list">
+      <li class="stepper-example-item is-complete"><span class="dot">✓</span> Draft</li>
+      <li class="stepper-example-item is-complete"><span class="dot">✓</span> Review</li>
+      <li aria-current="step" class="stepper-example-item is-current"><span class="dot">3</span> Publish</li>
+    </ol>
+  </tng-stepper>
+</div>
+
+<br>
+
+<div class="stepper-example-shell stepper-example-shell--plain">
+  <tng-stepper ariaLabel="Onboarding">
+    <ol class="stepper-example-list">
+      <li class="stepper-example-item is-complete"><span class="dot">✓</span> Profile</li>
+      <li aria-current="step" class="stepper-example-item is-error"><span class="dot">2</span> Billing</li>
+      <li class="stepper-example-item"><span class="dot">3</span> Team invite</li>
+    </ol>
+  </tng-stepper>
+</div>
