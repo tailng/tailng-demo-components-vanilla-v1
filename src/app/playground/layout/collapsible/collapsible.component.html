@@ -1,4 +1,46 @@
-<section class="demo-page">
-  <h1>Collapsible</h1>
-  <p>Collapsible playground page.</p>
-</section>
+<!-- Collapsible component examples. -->
+<div class="collapsible-preview-shell collapsible-preview-shell--plain">
+  <tng-collapsible
+    title="Release pipeline"
+    [open]="open()"
+    (openChange)="open.set($event)"
+  >
+    <ol class="collapsible-preview-list">
+      <li class="collapsible-preview-item is-complete"><span class="collapsible-preview-dot">✓</span> Draft</li>
+      <li class="collapsible-preview-item is-current"><span class="collapsible-preview-dot">2</span> Review</li>
+      <li class="collapsible-preview-item"><span class="collapsible-preview-dot">3</span> Publish</li>
+    </ol>
+  </tng-collapsible>
+</div>
+
+<br>
+<!-- checkout progression -->
+<div class="collapsible-example-shell collapsible-example-shell--plain">
+  <tng-collapsible
+    title="Checkout progress"
+    [open]="open()"
+    (openChange)="open.set($event)"
+  >
+    <ol class="collapsible-example-list">
+      <li class="collapsible-example-item is-complete"><span class="dot">✓</span> Cart</li>
+      <li class="collapsible-example-item is-current"><span class="dot">2</span> Shipping</li>
+      <li class="collapsible-example-item"><span class="dot">3</span> Payment</li>
+    </ol>
+  </tng-collapsible>
+</div>
+
+<br>
+<!-- Onboarding flow with an error state example. -->
+<div class="collapsible-example-shell collapsible-example-shell--plain">
+  <tng-collapsible
+    title="Onboarding"
+    [open]="open()"
+    (openChange)="open.set($event)"
+  >
+    <ol class="collapsible-example-list">
+      <li class="collapsible-example-item is-complete"><span class="dot">✓</span> Profile</li>
+      <li class="collapsible-example-item is-error"><span class="dot">2</span> Billing</li>
+      <li class="collapsible-example-item"><span class="dot">3</span> Team invite</li>
+    </ol>
+  </tng-collapsible>
+</div>

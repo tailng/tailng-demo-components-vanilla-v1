@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'separator';
+export const DEFAULT_ROUTE = 'collapsible';
