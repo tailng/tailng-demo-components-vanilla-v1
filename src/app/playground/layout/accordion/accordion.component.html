@@ -1,4 +1,44 @@
-<section class="demo-page">
-  <h1>Accordion</h1>
-  <p>Accordion playground page.</p>
-</section>
+<!-- Single panel -->
+<div class="accordion-preview-shell accordion-preview-shell--plain">
+  <tng-accordion ariaLabel="Release FAQ" [defaultValue]="'ownership'">
+    <tng-accordion-item value="ownership">
+      <tng-accordion-trigger class="accordion-preview-trigger">
+        Ownership model
+        <span tngAccordionIndicator aria-hidden="true" class="accordion-preview-chevron">⌄</span>
+      </tng-accordion-trigger>
+      <tng-accordion-panel class="accordion-preview-panel">
+        Copy-paste mode keeps source in your app for long-term ownership.
+      </tng-accordion-panel>
+    </tng-accordion-item>
+
+    <tng-accordion-item value="testing">
+      <tng-accordion-trigger class="accordion-preview-trigger">
+        Test coverage
+        <span tngAccordionIndicator aria-hidden="true" class="accordion-preview-chevron">⌄</span>
+      </tng-accordion-trigger>
+      <tng-accordion-panel class="accordion-preview-panel">
+        Primitive suites validate keyboard, pointer, and aria behavior.
+      </tng-accordion-panel>
+    </tng-accordion-item>
+  </tng-accordion>
+</div>
+
+<br>
+
+<!-- Multiple panels -->
+<div class="accordion-example-shell accordion-example-shell--plain">
+  <tng-accordion type="multiple" [defaultValue]="['alerts']" ariaLabel="System settings">
+    <tng-accordion-item value="alerts">
+      <tng-accordion-trigger class="accordion-example-trigger">Alerts</tng-accordion-trigger>
+      <tng-accordion-panel class="accordion-example-panel">PagerDuty, email, and Slack routing.</tng-accordion-panel>
+    </tng-accordion-item>
+    <tng-accordion-item value="audits">
+      <tng-accordion-trigger class="accordion-example-trigger">Audits</tng-accordion-trigger>
+      <tng-accordion-panel class="accordion-example-panel">Retention and export scheduling.</tng-accordion-panel>
+    </tng-accordion-item>
+    <tng-accordion-item value="billing" disabled>
+      <tng-accordion-trigger class="accordion-example-trigger">Billing (disabled)</tng-accordion-trigger>
+      <tng-accordion-panel class="accordion-example-panel">Disabled sections stay locked.</tng-accordion-panel>
+    </tng-accordion-item>
+  </tng-accordion>
+</div>

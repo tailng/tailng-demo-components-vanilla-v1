@@ -1,7 +1,12 @@
-.demo-page {
-  padding: 1rem;
+/* single panel */
+.accordion-preview-shell--plain {
+  background: var(--tng-semantic-background-surface);
+  border: 1px solid var(--tng-semantic-border-subtle);
+  border-radius: 0.8rem;
+  padding: 0.75rem;
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+/* Multiple panels */
+tng-accordion-item[disabled] {
+  opacity: 0.65;
 }
