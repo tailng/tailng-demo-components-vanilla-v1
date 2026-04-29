@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = 'dialog';
+export const DEFAULT_ROUTE = 'popover';

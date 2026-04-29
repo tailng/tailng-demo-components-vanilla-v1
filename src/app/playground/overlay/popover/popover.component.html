@@ -1,4 +1,30 @@
-<section class="demo-page">
-  <h1>Popover</h1>
-  <p>Popover playground page.</p>
-</section>
+<!-- Wrapper popover -->
+<tng-popover
+  #popover
+  triggerLabel="Project actions"
+  [open]="reviewOpen()"
+  (openChange)="reviewOpen.set($event)"
+  (closed)="onClosed($event)"
+>
+  <p class="popover-body-copy">Use wrapper defaults for trigger wiring and dismissal behavior.</p>
+  <div class="popover-preview-actions">
+    <button type="button" class="popover-action-ghost" (click)="popover.close()">Close</button>
+    <button type="button" class="popover-action-primary" (click)="popover.close()">Apply</button>
+  </div>
+</tng-popover>
+
+<br />
+<br />
+
+<!-- Wrapper destructive confirmation -->
+<tng-popover
+  triggerLabel="Delete release branch"
+  [open]="deleteOpen()"
+  (openChange)="deleteOpen.set($event)"
+>
+  <p class="popover-example-copy">This action removes branch automation and cannot be undone.</p>
+  <div class="popover-action-row">
+    <button type="button" class="popover-example-secondary" (click)="onCancel()">Cancel</button>
+    <button type="button" class="popover-example-danger" (click)="onApprove()">Delete</button>
+  </div>
+</tng-popover>

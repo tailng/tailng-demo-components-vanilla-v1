@@ -1,7 +1,56 @@
-.demo-page {
-  padding: 1rem;
+/* Wrapper popover */
+.popover-action-ghost,
+.popover-action-primary {
+  border-radius: 0.7rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  min-height: 2.1rem;
+  padding: 0.45rem 0.9rem;
 }
 
-.demo-page h1 {
-  margin: 0 0 0.5rem;
+.popover-action-ghost {
+  background: color-mix(in srgb, var(--tng-semantic-background-canvas) 80%, transparent);
+  border: 1px solid var(--tng-semantic-border-subtle);
+  color: var(--tng-semantic-foreground-primary);
+}
+
+.popover-action-primary {
+  background: var(--tng-semantic-accent-brand);
+  border: 1px solid var(--tng-semantic-accent-brand);
+  color: var(--tng-semantic-background-canvas);
+}
+
+.popover-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.popover-action-ghost:hover {
+  background: color-mix(in srgb, var(--tng-semantic-background-canvas) 64%, transparent);
+}
+
+.popover-action-primary:hover {
+  background: color-mix(in srgb, var(--tng-semantic-accent-brand) 88%, black);
+}
+
+.popover-action-ghost:focus-visible,
+.popover-action-primary:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tng-semantic-focus-ring) 78%, transparent);
+  outline: none;
+}
+
+/* Wrapper destructive confirmation */
+.popover-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: flex-end;
+}
+
+.popover-example-danger {
+  background: #dc2626;
+  color: #fff;
 }
